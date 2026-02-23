@@ -1,0 +1,202 @@
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Minimal Daily AI Briefing Reader</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#333333", 
+                        "background-light": "#fcfcfc",
+                        "background-dark": "#101922",
+                        "paper-light": "#ffffff",
+                        "paper-dark": "#182430",
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader", "serif"],
+                        "sans": ["Inter", "sans-serif"],
+                        "mono": ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"],
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Inter", sans-serif;
+        }
+        .serif-text {
+            font-family: "Newsreader", serif;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 flex flex-col h-screen overflow-hidden selection:bg-gray-200 selection:text-slate-900">
+<header class="flex-none h-16 border-b border-slate-200 dark:border-slate-800 flex items-center px-6 lg:px-10 bg-paper-light dark:bg-background-dark z-20">
+<div class="flex items-center gap-3">
+<div class="relative">
+<button id="calBtn" onclick="toggleCal(event)" class="flex items-center gap-2 p-2 text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 cursor-pointer">
+<span class="material-symbols-outlined text-[20px]">calendar_today</span>
+</button>
+<div id="calMenu" class="hidden absolute top-full left-0 mt-1 w-36 bg-white dark:bg-slate-800 rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 z-50 overflow-hidden py-1 max-h-60 overflow-y-auto">
+<a href="daily-20260223.html" class="block px-4 py-2.5 text-xs font-mono transition-colors text-slate-900 dark:text-slate-100 font-bold bg-slate-100 dark:bg-slate-700">2026.02.23</a>
+<a href="daily-20260222.html" class="block px-4 py-2.5 text-xs font-mono transition-colors text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700/60 hover:text-slate-900 dark:hover:text-slate-100">2026.02.22</a>
+</div>
+</div>
+<h2 class="text-sm font-bold tracking-widest uppercase text-slate-500 dark:text-slate-400 font-mono">
+2026.02.23 DAILY REPORT
+</h2>
+</div>
+</header>
+<script>
+function toggleCal(e) {
+  e.stopPropagation();
+  document.getElementById('calMenu').classList.toggle('hidden');
+}
+document.addEventListener('click', function() {
+  document.getElementById('calMenu').classList.add('hidden');
+});
+</script>
+<main class="flex-1 flex overflow-hidden">
+<aside class="w-full max-w-[320px] border-r border-slate-200 dark:border-slate-800 bg-background-light dark:bg-background-dark flex flex-col overflow-y-auto hide-scrollbar hidden md:flex">
+<div class="p-4 sticky top-0 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm z-10 border-b border-slate-200/50 dark:border-slate-800/50">
+<span class="text-xs font-mono font-medium text-slate-400 dark:text-slate-500 uppercase tracking-wider">Index</span>
+</div>
+<div class="flex flex-col text-sm">
+<a href="#news-01" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-slate-800 bg-white dark:bg-slate-800/20 no-underline">
+<span class="font-mono text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-wide">01. Product</span>
+<span class="font-medium text-slate-900 dark:text-slate-100 group-hover:text-slate-700">삼성, Galaxy AI에 Perplexity 통합 추진</span>
+</a>
+<a href="#news-02" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-800/10 border-b border-slate-100 dark:border-slate-800/50 no-underline">
+<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">02. AI Research</span>
+<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">Apple, 비주얼 인공지능(Visual AI) 분야 집중</span>
+</a>
+<a href="#news-03" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-800/10 border-b border-slate-100 dark:border-slate-800/50 no-underline">
+<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">03. Market</span>
+<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">중국 AI 제품 개발 방식, 서구와 차이점 존재</span>
+</a>
+<a href="#news-04" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-800/10 border-b border-slate-100 dark:border-slate-800/50 no-underline">
+<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">04. Market</span>
+<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">AI 데이터센터에 대한 정치적 입장 변화</span>
+</a>
+<a href="#news-05" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-800/10 border-b border-slate-100 dark:border-slate-800/50 no-underline">
+<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">05. Market</span>
+<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">Nvidia, 뛰어난 실적에도 주가 상승 제한될 가능성</span>
+</a>
+<a href="#news-06" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-800/10 border-b border-slate-100 dark:border-slate-800/50 no-underline">
+<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">06. Software</span>
+<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">Google, OpenClaw 사용자에게 Google AI Pro/Ultra 구독 제한 조치</span>
+</a>
+</div>
+</aside>
+<section class="flex-1 bg-slate-50/50 dark:bg-black/20 overflow-y-auto relative scroll-smooth p-6 lg:p-10">
+<div class="max-w-3xl mx-auto flex flex-col gap-6 pb-20">
+<div class="mb-2 p-6 bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-100 dark:border-slate-800">
+<p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed serif-text italic">
+오늘의 주요 뉴스는 삼성의 Galaxy AI에 Perplexity 통합, Apple의 비주얼 AI 집중, 그리고 중국 AI 제품 개발 방식의 차이점에 대한 분석입니다. 또한 AI 데이터센터에 대한 정치적 변화와 Nvidia의 주가 전망에 대한 분석도 포함되어 있습니다.
+</p>
+</div>
+<div id="news-01" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
+<div class="flex items-center gap-3 mb-1">
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">01. Product</span>
+</div>
+<h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
+삼성, Galaxy AI에 Perplexity 통합 추진
+</h3>
+<p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+삼성은 Galaxy S26 사용자에게 Bixby 또는 Gemini 외에 Perplexity AI 에이전트를 호출할 수 있는 기능을 추가할 예정입니다. 이는 삼성의 '멀티 에이전트 생태계(multi-agent ecosystem)' 전략의 일환으로, 사용자가 다양한 AI 에이전트를 활용하여 특정 작업에 맞는 최적의 서비스를 선택할 수 있도록 지원합니다. 삼성은 운영체제(OS)에 다양한 에이전트를 통합할 수 있도록 개방할 계획입니다.
+</p>
+</div>
+<div id="news-02" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
+<div class="flex items-center gap-3 mb-1">
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">02. AI Research</span>
+</div>
+<h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
+Apple, 비주얼 인공지능(Visual AI) 분야 집중
+</h3>
+<p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+Apple의 Tim Cook CEO는 비주얼 인공지능(Visual AI)이 웨어러블 AI 기기 개발의 핵심 기능이 될 것임을 시사했습니다. Apple은 3월 초에 있을 신제품 발표회에서 관련 기술을 선보일 것으로 예상됩니다.
+</p>
+</div>
+<div id="news-03" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
+<div class="flex items-center gap-3 mb-1">
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">03. Market</span>
+</div>
+<h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
+중국 AI 제품 개발 방식, 서구와 차이점 존재
+</h3>
+<p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+중국 Meituan 출신의 제품 관리자는 중국 AI 제품 개발 방식이 서구와 다르다고 지적했습니다. 그는 중국과 해외 시장의 근본적인 차이점을 강조하며, 중국에서는 전통적인 경로보다 창업을 선택하는 사람들이 늘고 있다고 언급했습니다.
+</p>
+</div>
+<div id="news-04" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
+<div class="flex items-center gap-3 mb-1">
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">04. Market</span>
+</div>
+<h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
+AI 데이터센터에 대한 정치적 입장 변화
+</h3>
+<p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+2028년 대선 잠룡으로 거론되는 민주당 인사들이 AI 데이터센터 유치에 대한 기존 입장에서 후퇴하는 모습을 보이고 있습니다. 이는 AI 기술에 대한 정치적 역학 관계가 빠르게 변화하고 있음을 시사합니다.
+</p>
+</div>
+<div id="news-05" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
+<div class="flex items-center gap-3 mb-1">
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">05. Market</span>
+</div>
+<h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
+Nvidia, 뛰어난 실적에도 주가 상승 제한될 가능성
+</h3>
+<p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+인공지능(AI)에 대한 회의론이 커지면서, 월가는 Nvidia의 이번 주 실적 발표가 아무리 좋더라도 주가 상승을 견인하지 못할 수 있다는 우려를 제기하고 있습니다. Nvidia는 수년간 주식 시장 상승을 이끌어 왔지만, AI에 대한 의구심 증가로 인해 투자 심리가 위축될 수 있습니다.
+</p>
+</div>
+<div id="news-06" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
+<div class="flex items-center gap-3 mb-1">
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">06. Software</span>
+</div>
+<h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
+Google, OpenClaw 사용자에게 Google AI Pro/Ultra 구독 제한 조치
+</h3>
+<p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+Google이 OpenClaw를 사용하는 Google AI Pro/Ultra 구독자에게 사전 경고 없이 계정 제한 조치를 내린 것으로 보입니다. 자세한 이유는 아직 밝혀지지 않았습니다.
+</p>
+</div>
+<div class="mt-4 p-6 bg-slate-100 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700">
+<h4 class="text-xs font-bold font-mono uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-3">Today's Remark</h4>
+<p class="serif-text text-lg text-slate-700 dark:text-slate-300 leading-relaxed italic">
+"오늘 뉴스는 AI 기술의 발전 방향, 시장 경쟁 심화, 그리고 정치적 영향력 확대 등 다양한 측면을 보여주고 있습니다. 특히 AI 데이터센터에 대한 정치적 입장 변화는 AI 기술이 사회 전반에 미치는 영향력이 커지고 있음을 시사합니다."
+</p>
+</div>
+<div class="mt-8 flex justify-between items-center text-slate-400">
+<div class="flex gap-4">
+<button class="text-sm font-sans hover:text-slate-800 dark:hover:text-white transition-colors">Share Report</button>
+<button class="text-sm font-sans hover:text-slate-800 dark:hover:text-white transition-colors">Save as PDF</button>
+</div>
+<div class="text-xs font-mono uppercase tracking-wide">
+                        Next: Feb 24, 08:00
+                    </div>
+</div>
+</div>
+</section>
+</main>
+<div class="md:hidden fixed bottom-6 right-6 z-50">
+<button class="w-12 h-12 bg-slate-800 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined text-[20px]">menu_open</span>
+</button>
+</div>
+
+</body></html>

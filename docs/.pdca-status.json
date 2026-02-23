@@ -1,0 +1,95 @@
+{
+  "version": "2.0",
+  "lastUpdated": "2026-02-23T01:47:55.338Z",
+  "activeFeatures": [
+    "coporation-new"
+  ],
+  "primaryFeature": "coporation-new",
+  "features": {
+    "coporation-new": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-02-23T01:24:18.329Z",
+        "lastUpdated": "2026-02-23T01:47:55.338Z"
+      },
+      "lastFile": "D:\\Development\\workspace\\vscode\\coporation-new\\src\\generate-html.ts"
+    }
+  },
+  "pipeline": {
+    "currentPhase": 1,
+    "level": "Dynamic",
+    "phaseHistory": []
+  },
+  "session": {
+    "startedAt": "2026-02-23T01:24:18.329Z",
+    "onboardingCompleted": false,
+    "lastActivity": "2026-02-23T01:47:55.338Z"
+  },
+  "history": [
+    {
+      "timestamp": "2026-02-23T01:24:18.329Z",
+      "feature": "coporation-new",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-23T01:24:38.805Z",
+      "feature": "coporation-new",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-23T01:25:00.854Z",
+      "feature": "coporation-new",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-23T01:25:32.693Z",
+      "feature": "coporation-new",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-23T01:25:45.226Z",
+      "feature": "coporation-new",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-23T01:32:36.499Z",
+      "feature": "coporation-new",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-23T01:32:44.497Z",
+      "feature": "coporation-new",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-23T01:32:52.471Z",
+      "feature": "coporation-new",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-23T01:42:37.198Z",
+      "feature": "coporation-new",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-02-23T01:47:55.338Z",
+      "feature": "coporation-new",
+      "phase": "do",
+      "action": "updated"
+    }
+  ]
+}

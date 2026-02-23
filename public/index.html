@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="refresh" content="0; url=/output/">
+<title>AI Daily Briefing</title>
+<script>
+  // 최신 daily HTML로 리다이렉트
+  const today = new Date();
+  const y = today.getFullYear();
+  const m = String(today.getMonth() + 1).padStart(2, '0');
+  const d = String(today.getDate()).padStart(2, '0');
+  window.location.href = `/output/daily-${y}${m}${d}.html`;
+</script>
+</head>
+<body>
+<p>Redirecting to latest briefing...</p>
+</body>
+</html>

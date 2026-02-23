@@ -1,0 +1,19 @@
+{
+  "name": "coporation-new",
+  "version": "1.0.0",
+  "description": "AI Daily Briefing - 뉴스 수집 + Gemini 요약 + HTML 생성",
+  "type": "module",
+  "scripts": {
+    "collect": "tsx src/main.ts"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "dotenv": "^17.3.1",
+    "rss-parser": "^3.13.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

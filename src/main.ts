@@ -6,12 +6,14 @@ import { generateHtml, saveHtml } from "./generate-html.js";
 config(); // .env 로드
 
 async function main() {
-  const today = new Date();
+  // --date YYYY-MM-DD 인자 지원
+  const dateArg = process.argv.find((a) => a.startsWith("--date="))?.split("=")[1];
+  const today = dateArg ? new Date(dateArg + "T12:00:00") : new Date();
   console.log(`\n=== AI Daily Briefing ===`);
   console.log(`날짜: ${today.toISOString().split("T")[0]}\n`);
 
   // 1. 뉴스 수집
-  const articles = await collectNews();
+  const articles = await collectNews(today);
   if (articles.length === 0) {
     console.log("[완료] 수집된 기사가 없습니다. 종료합니다.");
     return;

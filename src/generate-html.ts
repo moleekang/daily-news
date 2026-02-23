@@ -82,6 +82,66 @@ document.addEventListener('click', function() {
 </script>`;
 }
 
+function buildBanner(): string {
+  return `<div class="rounded-lg overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" width="100%" style="display:block;">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="60%" style="stop-color:#1e293b"/>
+      <stop offset="100%" style="stop-color:#0f172a"/>
+    </linearGradient>
+    <linearGradient id="lineg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#334155;stop-opacity:0"/>
+      <stop offset="50%" style="stop-color:#64748b"/>
+      <stop offset="100%" style="stop-color:#334155;stop-opacity:0"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#38bdf8"/>
+      <stop offset="100%" style="stop-color:#818cf8"/>
+    </linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="18"/></filter>
+  </defs>
+  <rect width="900" height="220" fill="url(#bg)"/>
+  <circle cx="200" cy="110" r="100" fill="#1d4ed8" opacity="0.08" filter="url(#blur)"/>
+  <circle cx="700" cy="80" r="90" fill="#7c3aed" opacity="0.07" filter="url(#blur)"/>
+  <circle cx="500" cy="160" r="70" fill="#0891b2" opacity="0.06" filter="url(#blur)"/>
+  <g fill="#334155" opacity="0.5">
+    <rect x="60" y="30" width="1.5" height="1.5" rx="0.75"/><rect x="100" y="30" width="1.5" height="1.5" rx="0.75"/><rect x="140" y="30" width="1.5" height="1.5" rx="0.75"/>
+    <rect x="60" y="60" width="1.5" height="1.5" rx="0.75"/><rect x="100" y="60" width="1.5" height="1.5" rx="0.75"/><rect x="140" y="60" width="1.5" height="1.5" rx="0.75"/>
+    <rect x="60" y="90" width="1.5" height="1.5" rx="0.75"/><rect x="100" y="90" width="1.5" height="1.5" rx="0.75"/><rect x="60" y="120" width="1.5" height="1.5" rx="0.75"/>
+    <rect x="760" y="120" width="1.5" height="1.5" rx="0.75"/><rect x="800" y="120" width="1.5" height="1.5" rx="0.75"/><rect x="840" y="120" width="1.5" height="1.5" rx="0.75"/>
+    <rect x="760" y="150" width="1.5" height="1.5" rx="0.75"/><rect x="800" y="150" width="1.5" height="1.5" rx="0.75"/><rect x="840" y="150" width="1.5" height="1.5" rx="0.75"/>
+    <rect x="760" y="180" width="1.5" height="1.5" rx="0.75"/><rect x="800" y="180" width="1.5" height="1.5" rx="0.75"/><rect x="840" y="180" width="1.5" height="1.5" rx="0.75"/>
+  </g>
+  <g opacity="0.6">
+    <line x1="60" y1="110" x2="120" y2="80" stroke="#334155" stroke-width="1"/>
+    <line x1="60" y1="110" x2="120" y2="140" stroke="#334155" stroke-width="1"/>
+    <line x1="120" y1="80" x2="190" y2="110" stroke="#1e40af" stroke-width="1"/>
+    <line x1="120" y1="140" x2="190" y2="110" stroke="#1e40af" stroke-width="1"/>
+    <circle cx="60" cy="110" r="4" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+    <circle cx="120" cy="80" r="4" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+    <circle cx="120" cy="140" r="4" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+    <circle cx="190" cy="110" r="5" fill="#1e3a5f" stroke="#38bdf8" stroke-width="1.5"/>
+  </g>
+  <g opacity="0.6">
+    <line x1="840" y1="110" x2="780" y2="80" stroke="#334155" stroke-width="1"/>
+    <line x1="840" y1="110" x2="780" y2="140" stroke="#334155" stroke-width="1"/>
+    <line x1="780" y1="80" x2="710" y2="110" stroke="#4c1d95" stroke-width="1"/>
+    <line x1="780" y1="140" x2="710" y2="110" stroke="#4c1d95" stroke-width="1"/>
+    <circle cx="840" cy="110" r="4" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+    <circle cx="780" cy="80" r="4" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+    <circle cx="780" cy="140" r="4" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+    <circle cx="710" cy="110" r="5" fill="#2d1b69" stroke="#818cf8" stroke-width="1.5"/>
+  </g>
+  <rect x="0" y="172" width="900" height="1" fill="url(#lineg)" opacity="0.4"/>
+  <text x="450" y="96" font-family="ui-monospace,monospace" font-size="64" font-weight="700" letter-spacing="-2" text-anchor="middle" fill="url(#glow)" opacity="0.95">AI</text>
+  <text x="450" y="142" font-family="ui-monospace,monospace" font-size="16" font-weight="400" letter-spacing="10" text-anchor="middle" fill="#94a3b8">DAILY BRIEFING</text>
+  <text x="450" y="193" font-family="ui-monospace,monospace" font-size="10" letter-spacing="4" text-anchor="middle" fill="#475569">POWERED BY GEMINI · RSS INTELLIGENCE · AUTO-GENERATED</text>
+</svg>
+</div>`;
+}
+
 function buildSidebarItems(items: BriefingResult["items"]): string {
   return items
     .map((item, i) => {
@@ -136,24 +196,27 @@ export function generateHtml(briefing: BriefingResult, date: Date = new Date()):
   const sidebarRegex = /<div class="flex flex-col text-sm">[\s\S]*?<\/div>\s*<\/aside>/;
   html = html.replace(sidebarRegex, `<div class="flex flex-col text-sm">\n${buildSidebarItems(briefing.items)}\n</div>\n</aside>`);
 
-  // 3. 서두 이탤릭 요약문
+  // 3. 배너
+  html = html.replace("<!-- BANNER -->", buildBanner());
+
+  // 4. 서두 이탤릭 요약문
   html = html.replace(
     /<p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed serif-text italic">[\s\S]*?<\/p>/,
     `<p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed serif-text italic">\n${briefing.intro}\n</p>`
   );
 
-  // 4. 메인 콘텐츠 카드들
+  // 5. 메인 콘텐츠 카드들
   const mainContentRegex =
     /<div class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200[\s\S]*?<div class="mt-4 p-6 bg-slate-100/;
   html = html.replace(mainContentRegex, `${buildContentCards(briefing.items)}\n<div class="mt-4 p-6 bg-slate-100`);
 
-  // 5. Today's Remark
+  // 6. Today's Remark
   html = html.replace(
     /<p class="serif-text text-lg text-slate-700 dark:text-slate-300 leading-relaxed italic">[\s\S]*?<\/p>\s*<\/div>\s*<div class="mt-8/,
     `<p class="serif-text text-lg text-slate-700 dark:text-slate-300 leading-relaxed italic">\n"${briefing.remark}"\n</p>\n</div>\n<div class="mt-8`
   );
 
-  // 6. Next 날짜
+  // 7. Next 날짜
   html = html.replace(/Next: .+?(?=\s*<\/div>)/, `Next: ${next}`);
 
   return html;

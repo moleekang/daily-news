@@ -19,9 +19,9 @@ export interface Article {
 
 const parser = new Parser({ timeout: 10_000 });
 
-function isWithinAgeLimit(pubDate: Date): boolean {
-  const now = Date.now();
-  const diffHours = (now - pubDate.getTime()) / (1000 * 60 * 60);
+function isWithinAgeLimit(pubDate: Date, referenceDate?: Date): boolean {
+  const ref = referenceDate ?? new Date();
+  const diffHours = Math.abs(ref.getTime() - pubDate.getTime()) / (1000 * 60 * 60);
   return diffHours <= AGE_LIMIT_HOURS;
 }
 
@@ -66,7 +66,7 @@ function deduplicate(articles: Article[]): Article[] {
   });
 }
 
-export async function collectNews(): Promise<Article[]> {
+export async function collectNews(referenceDate?: Date): Promise<Article[]> {
   console.log(`[수집] ${RSS_FEEDS.length}개 RSS 피드 파싱 시작...`);
 
   const results = await Promise.allSettled(RSS_FEEDS.map(fetchFeed));
@@ -76,7 +76,7 @@ export async function collectNews(): Promise<Article[]> {
   console.log(`[수집] 총 ${allArticles.length}개 기사 파싱 완료`);
 
   // 날짜 필터
-  const fresh = allArticles.filter((a) => isWithinAgeLimit(a.pubDate));
+  const fresh = allArticles.filter((a) => isWithinAgeLimit(a.pubDate, referenceDate));
   console.log(`[필터] 24시간 이내: ${fresh.length}개`);
 
   // 키워드 필터

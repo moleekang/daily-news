@@ -7,6 +7,23 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const TEMPLATE_PATH = resolve(__dirname, "../docs/template.html");
 const OUTPUT_DIR = resolve(__dirname, "../output");
 
+const SITE_URL = "https://daily-news-three-sigma.vercel.app";
+
+function buildOgTags(full: string, file: string, intro: string): string {
+  const pageUrl = `${SITE_URL}/output/daily-${file}.html`;
+  const imageUrl = `${SITE_URL}/public/banner.svg`;
+  const title = `AI Daily Briefing · ${full}`;
+  return `<meta property="og:type" content="article"/>
+<meta property="og:title" content="${title}"/>
+<meta property="og:description" content="${intro.slice(0, 120)}"/>
+<meta property="og:image" content="${imageUrl}"/>
+<meta property="og:url" content="${pageUrl}"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="${title}"/>
+<meta name="twitter:image" content="${imageUrl}"/>
+<title>${title}</title>`;
+}
+
 function formatDate(d: Date) {
   const y = d.getFullYear();
   const m = String(d.getMonth() + 1).padStart(2, "0");
@@ -186,17 +203,20 @@ export function generateHtml(briefing: BriefingResult, date: Date = new Date()):
 
   let html = template;
 
-  // 1. 헤더: 캘린더 드롭다운 + 날짜 삽입
+  // 1. OG 태그
+  html = html.replace("<!-- OG_TAGS -->", buildOgTags(full, file, briefing.intro));
+
+  // 2. 헤더: 캘린더 드롭다운 + 날짜 삽입
   html = html.replace(
     "<!-- CALENDAR_HEADER -->",
     buildCalendarHeader(file, full)
   );
 
-  // 2. 사이드바
+  // 3. 사이드바
   const sidebarRegex = /<div class="flex flex-col text-sm">[\s\S]*?<\/div>\s*<\/aside>/;
   html = html.replace(sidebarRegex, `<div class="flex flex-col text-sm">\n${buildSidebarItems(briefing.items)}\n</div>\n</aside>`);
 
-  // 3. 배너
+  // 4. 배너
   html = html.replace("<!-- BANNER -->", buildBanner());
 
   // 4. 서두 이탤릭 요약문

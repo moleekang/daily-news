@@ -182,6 +182,14 @@ function buildContentCards(items: BriefingResult["items"]): string {
   return items
     .map((item, i) => {
       const num = String(i + 1).padStart(2, "0");
+      const sourceLink = item.link
+        ? `<div class="pt-3 border-t border-slate-100 dark:border-slate-800">
+<a href="${item.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm6.75-3a.75.75 0 010 1.5h2.44L8.22 9.22a.75.75 0 101.06 1.06L14.5 5.06v2.44a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5z" clip-rule="evenodd"/></svg>
+${item.source ?? '원리기사 보기'}
+</a>
+</div>`
+        : "";
       return `<div id="news-${num}" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
 <div class="flex items-center gap-3 mb-1">
 <span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">${num}. ${item.category}</span>
@@ -192,6 +200,7 @@ ${item.title}
 <p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
 ${item.content}
 </p>
+${sourceLink}
 </div>`;
     })
     .join("\n");
@@ -232,12 +241,9 @@ export function generateHtml(briefing: BriefingResult, date: Date = new Date()):
 
   // 6. Today's Remark
   html = html.replace(
-    /<p class="serif-text text-lg text-slate-700 dark:text-slate-300 leading-relaxed italic">[\s\S]*?<\/p>\s*<\/div>\s*<div class="mt-8/,
-    `<p class="serif-text text-lg text-slate-700 dark:text-slate-300 leading-relaxed italic">\n"${briefing.remark}"\n</p>\n</div>\n<div class="mt-8`
+    /<p class="serif-text text-lg text-slate-700 dark:text-slate-300 leading-relaxed italic">[\s\S]*?<\/p>\s*<\/div>/,
+    `<p class="serif-text text-lg text-slate-700 dark:text-slate-300 leading-relaxed italic">\n"${briefing.remark}"\n</p>\n</div>`
   );
-
-  // 7. Next 날짜
-  html = html.replace(/Next: .+?(?=\s*<\/div>)/, `Next: ${next}`);
 
   return html;
 }

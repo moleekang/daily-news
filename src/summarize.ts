@@ -6,6 +6,8 @@ export interface BriefingItem {
   category: string;
   title: string;
   content: string;
+  link: string;
+  source: string;
 }
 
 export interface BriefingResult {

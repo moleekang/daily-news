@@ -6,21 +6,15 @@ export interface RssSource {
 
 export const RSS_FEEDS: RssSource[] = [
   // Tier 1: 공식 블로그
-  { name: "OpenAI Blog", url: "https://openai.com/blog/rss/", tier: 1 },
-  { name: "Google AI Blog", url: "https://blog.google/technology/ai/feed/", tier: 1 },
   { name: "Hugging Face", url: "https://huggingface.co/blog/feed.xml", tier: 1 },
-  { name: "Anthropic Blog", url: "https://www.anthropic.com/feed.xml", tier: 1 },
 
   // Tier 2: 전문 테크 매체
   { name: "TechCrunch", url: "https://techcrunch.com/feed", tier: 2 },
-  { name: "MIT Tech Review", url: "https://www.technologyreview.com/feed.xml", tier: 2 },
   { name: "Ars Technica", url: "https://arstechnica.com/feed/", tier: 2 },
   { name: "Wired", url: "https://www.wired.com/feed/rss", tier: 2 },
 
-  // Tier 3: 종합 매체/커뮤니티
+  // Tier 3: 종합 매체
   { name: "The Verge", url: "https://www.theverge.com/rss/index.xml", tier: 3 },
-  { name: "Hacker News", url: "https://news.ycombinator.com/rss", tier: 3 },
-  { name: "Product Hunt", url: "https://www.producthunt.com/feed", tier: 3 },
   { name: "Bloomberg Tech", url: "https://feeds.bloomberg.com/technology/news.rss", tier: 3 },
   { name: "Axios", url: "https://api.axios.com/feed/", tier: 3 },
   { name: "Business Insider Tech", url: "https://feeds.businessinsider.com/custom/all", tier: 3 },
@@ -45,7 +39,7 @@ export const KEYWORDS_FILTER = [
 ];
 
 export const MIN_KEYWORD_MATCH = 2;
-export const MAX_ARTICLES = 20;
+export const MAX_ARTICLES = 10;
 export const AGE_LIMIT_HOURS = 24;
 
 export const GEMINI_MODEL = "gemini-2.0-flash";

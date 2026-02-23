@@ -6,8 +6,9 @@ export interface BriefingItem {
   category: string;
   title: string;
   content: string;
-  link: string;
-  source: string;
+  link?: string;
+  source?: string;
+  sourceIndex?: number;
 }
 
 export interface BriefingResult {
@@ -26,13 +27,14 @@ const SYSTEM_PROMPT = `당신은 AI/테크 전문 뉴스 에디터입니다.
 4. 전문 용어는 영어를 병기하세요 (예: 대규모 언어모델(LLM))
 5. 서두 요약문(intro)은 오늘의 전체 뉴스를 1~2문장으로 개괄하세요
 6. 총평(remark)은 오늘의 뉴스에서 읽을 수 있는 큰 흐름이나 시사점을 1~2문장으로 작성하세요
-7. 최대 7개 기사를 선별하여 가장 중요한 것만 포함하세요
+7. 최대 10개 기사를 선별하여 가장 중요한 것만 포함하세요
+8. 각 항목에 sourceIndex (원본 기사 번호, 1부터 시작)를 반드시 포함하세요
 
 반드시 아래 JSON 형식으로만 응답하세요 (다른 텍스트 없이):
 {
   "intro": "오늘의 서두 요약문",
   "items": [
-    { "category": "카테고리", "title": "한국어 제목", "content": "한국어 요약 2~3문장" }
+    { "category": "카테고리", "title": "한국어 제목", "content": "한국어 요약 2~3문장", "sourceIndex": 1 }
   ],
   "remark": "오늘의 총평"
 }`;
@@ -67,6 +69,25 @@ export async function summarizeNews(articles: Article[]): Promise<BriefingResult
   }
 
   const parsed = JSON.parse(jsonMatch[0]) as BriefingResult;
+  
+  // 원본 Article과 매핑하여 link/source 추가
+  parsed.items.forEach((item) => {
+    // 제목에서 (sourceIndex: N) 제거
+    item.title = item.title.replace(/\s*\(sourceIndex:\s*\d+\)\s*/gi, "").trim();
+    
+    if (item.sourceIndex && item.sourceIndex >= 1 && item.sourceIndex <= articles.length) {
+      const originalArticle = articles[item.sourceIndex - 1];
+      item.link = originalArticle.link;
+      // Hacker News 등 애그리게이터는 원본 도메인을 출처로 표시
+      try {
+        const domain = new URL(originalArticle.link).hostname.replace("www.", "");
+        item.source = originalArticle.source === "Hacker News" ? domain : originalArticle.source;
+      } catch {
+        item.source = originalArticle.source;
+      }
+    }
+  });
+  
   console.log(`[요약] ${parsed.items.length}개 항목 생성 완료`);
   return parsed;
 }

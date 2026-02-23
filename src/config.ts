@@ -47,7 +47,7 @@ export const KEYWORDS_FILTER = [
 ];
 
 export const MIN_KEYWORD_MATCH = 2;
-export const MAX_ARTICLES = 10;
+export const MAX_ARTICLES = 20;
 export const AGE_LIMIT_HOURS = 24;
 
 export const GEMINI_MODEL = "gemini-2.0-flash";

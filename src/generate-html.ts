@@ -1,7 +1,7 @@
 import { readFileSync, writeFileSync, mkdirSync, readdirSync } from "fs";
 import { dirname, resolve } from "path";
 import { fileURLToPath } from "url";
-import type { BriefingResult } from "./summarize.js";
+import type { BriefingResult, BriefingItem } from "./summarize.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const TEMPLATE_PATH = resolve(__dirname, "../docs/template.html");
@@ -159,11 +159,17 @@ function buildBanner(): string {
 </div>`;
 }
 
-function buildSidebarItems(items: BriefingResult["items"]): string {
-  return items
+function buildSidebarSection(items: BriefingItem[], sectionLabel: string, sectionIcon: string, startIndex: number): string {
+  // 섹션 헤더
+  const header = `<div class="px-4 py-3 border-b border-slate-200/50 dark:border-slate-800/50">
+<span class="text-xs font-mono font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">${sectionIcon} ${sectionLabel}</span>
+</div>`;
+
+  // 각 아이템
+  const itemsHtml = items
     .map((item, i) => {
-      const num = String(i + 1).padStart(2, "0");
-      const isFirst = i === 0;
+      const num = String(startIndex + i).padStart(2, "0");
+      const isFirst = i === 0 && startIndex === 1;
       if (isFirst) {
         return `<a href="#news-${num}" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-slate-800 bg-white dark:bg-slate-800/20 no-underline">
 <span class="font-mono text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-wide">${num}. ${item.category}</span>
@@ -176,21 +182,26 @@ function buildSidebarItems(items: BriefingResult["items"]): string {
 </a>`;
     })
     .join("\n");
+
+  return header + "\n" + itemsHtml;
 }
 
-function buildContentCards(items: BriefingResult["items"]): string {
-  return items
-    .map((item, i) => {
-      const num = String(i + 1).padStart(2, "0");
-      const sourceLink = item.link
-        ? `<div class="pt-3 border-t border-slate-100 dark:border-slate-800">
+function buildSidebarItems(briefing: BriefingResult): string {
+  const softwarePart = buildSidebarSection(briefing.softwareItems, "Software & Tools", "🛠", 1);
+  const newsPart = buildSidebarSection(briefing.newsItems, "AI News", "📰", briefing.softwareItems.length + 1);
+  return softwarePart + "\n" + newsPart;
+}
+
+function buildCard(item: BriefingItem, num: string): string {
+  const sourceLink = item.link
+    ? `<div class="pt-3 border-t border-slate-100 dark:border-slate-800">
 <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm6.75-3a.75.75 0 010 1.5h2.44L8.22 9.22a.75.75 0 101.06 1.06L14.5 5.06v2.44a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5z" clip-rule="evenodd"/></svg>
-${item.source ?? '원리기사 보기'}
+${item.source ?? '원문 기사 보기'}
 </a>
 </div>`
-        : "";
-      return `<div id="news-${num}" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
+    : "";
+  return `<div id="news-${num}" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
 <div class="flex items-center gap-3 mb-1">
 <span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">${num}. ${item.category}</span>
 </div>
@@ -202,8 +213,39 @@ ${item.content}
 </p>
 ${sourceLink}
 </div>`;
-    })
+}
+
+function buildSectionHeader(icon: string, title: string, description: string): string {
+  return `<div class="flex items-center gap-3 pt-4 pb-2">
+<span class="text-2xl">${icon}</span>
+<div>
+<h2 class="text-lg font-sans font-bold text-slate-900 dark:text-slate-100">${title}</h2>
+<p class="text-sm text-slate-500 dark:text-slate-400">${description}</p>
+</div>
+</div>`;
+}
+
+function buildContentCards(briefing: BriefingResult): string {
+  const softwareHeader = buildSectionHeader(
+    "🛠",
+    "Software & Tools",
+    "직접 써볼 수 있는 AI 도구와 서비스 소식"
+  );
+  const softwareCards = briefing.softwareItems
+    .map((item, i) => buildCard(item, String(i + 1).padStart(2, "0")))
     .join("\n");
+
+  const newsHeader = buildSectionHeader(
+    "📰",
+    "AI News",
+    "알아두면 좋은 AI 업계 동향과 시사 뉴스"
+  );
+  const startIdx = briefing.softwareItems.length + 1;
+  const newsCards = briefing.newsItems
+    .map((item, i) => buildCard(item, String(startIdx + i).padStart(2, "0")))
+    .join("\n");
+
+  return `${softwareHeader}\n${softwareCards}\n${newsHeader}\n${newsCards}`;
 }
 
 export function generateHtml(briefing: BriefingResult, date: Date = new Date()): string {
@@ -221,9 +263,9 @@ export function generateHtml(briefing: BriefingResult, date: Date = new Date()):
     buildCalendarHeader(file, full)
   );
 
-  // 3. 사이드바
+  // 3. 사이드바 (2개 섹션으로 분리)
   const sidebarRegex = /<div class="flex flex-col text-sm">[\s\S]*?<\/div>\s*<\/aside>/;
-  html = html.replace(sidebarRegex, `<div class="flex flex-col text-sm">\n${buildSidebarItems(briefing.items)}\n</div>\n</aside>`);
+  html = html.replace(sidebarRegex, `<div class="flex flex-col text-sm">\n${buildSidebarItems(briefing)}\n</div>\n</aside>`);
 
   // 4. 배너
   html = html.replace("<!-- BANNER -->", buildBanner());
@@ -234,10 +276,10 @@ export function generateHtml(briefing: BriefingResult, date: Date = new Date()):
     `<p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed serif-text italic">\n${briefing.intro}\n</p>`
   );
 
-  // 5. 메인 콘텐츠 카드들
+  // 5. 메인 콘텐츠 카드들 (2개 섹션)
   const mainContentRegex =
     /<div class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200[\s\S]*?<div class="mt-4 p-6 bg-slate-100/;
-  html = html.replace(mainContentRegex, `${buildContentCards(briefing.items)}\n<div class="mt-4 p-6 bg-slate-100`);
+  html = html.replace(mainContentRegex, `${buildContentCards(briefing)}\n<div class="mt-4 p-6 bg-slate-100`);
 
   // 6. Today's Remark
   html = html.replace(

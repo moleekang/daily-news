@@ -13,6 +13,10 @@ export const RSS_FEEDS: RssSource[] = [
   { name: "Ars Technica", url: "https://arstechnica.com/feed/", tier: 2 },
   { name: "Wired", url: "https://www.wired.com/feed/rss", tier: 2 },
 
+  // Tier 2: 한국 AI/테크 매체
+  { name: "AI타임스", url: "https://www.aitimes.com/rss/allArticle.xml", tier: 2 },
+  { name: "전자신문", url: "https://rss.etnews.com/Section904.xml", tier: 2 },
+
   // Tier 3: 종합 매체
   { name: "The Verge", url: "https://www.theverge.com/rss/index.xml", tier: 3 },
   { name: "Bloomberg Tech", url: "https://feeds.bloomberg.com/technology/news.rss", tier: 3 },
@@ -36,6 +40,10 @@ export const KEYWORDS_FILTER = [
   "chatbot", "copilot", "AI assistant",
   // AI 인프라
   "Nvidia", "GPU", "AI chip", "data center",
+  // 한국어 키워드
+  "인공지능", "거대언어모델", "생성형", "딥러닝", "머신러닝",
+  "챗봇", "자율주행", "로봇", "반도체", "엔비디아",
+  "스타트업", "데이터센터", "클라우드",
 ];
 
 export const MIN_KEYWORD_MATCH = 2;

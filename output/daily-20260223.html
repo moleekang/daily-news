@@ -3,7 +3,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta property="og:type" content="article"/>
 <meta property="og:title" content="AI Daily Briefing · 2026.02.23"/>
-<meta property="og:description" content="오늘의 AI 및 테크 뉴스는 AI 인프라 구축 경쟁 심화, AI 모델의 잠재적 위험성, 그리고 AI 기술의 산업 현장 적용 확대를 중심으로 전개됩니다. 특히 대규모 데이터센터 관리자 수요 폭발과 AI 스타트업 투자 "/>
+<meta property="og:description" content="오늘의 AI 뉴스는 챗GPT의 개인적 용도 증가와 AI 모델의 저작권 침해 논란, 그리고 기업들의 AI 도입 경쟁 심화 소식을 담고 있습니다. 새로운 AI 도구와 플랫폼 소식도 함께 전해드립니다."/>
 <meta property="og:image" content="https://daily-news-three-sigma.vercel.app/public/banner.svg"/>
 <meta property="og:url" content="https://daily-news-three-sigma.vercel.app/output/daily-20260223.html"/>
 <meta name="twitter:card" content="summary_large_image"/>
@@ -61,6 +61,7 @@
 <span class="material-symbols-outlined text-[20px]">calendar_today</span>
 </button>
 <div id="calMenu" class="hidden absolute top-full left-0 mt-1 w-36 bg-white dark:bg-slate-800 rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 z-50 overflow-hidden py-1 max-h-60 overflow-y-auto">
+<a href="daily-20260224.html" class="block px-4 py-2.5 text-xs font-mono transition-colors text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700/60 hover:text-slate-900 dark:hover:text-slate-100">2026.02.24</a>
 <a href="daily-20260223.html" class="block px-4 py-2.5 text-xs font-mono transition-colors text-slate-900 dark:text-slate-100 font-bold bg-slate-100 dark:bg-slate-700">2026.02.23</a>
 <a href="daily-20260222.html" class="block px-4 py-2.5 text-xs font-mono transition-colors text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700/60 hover:text-slate-900 dark:hover:text-slate-100">2026.02.22</a>
 </div>
@@ -85,33 +86,51 @@ document.addEventListener('click', function() {
 <span class="text-xs font-mono font-medium text-slate-400 dark:text-slate-500 uppercase tracking-wider">Index</span>
 </div>
 <div class="flex flex-col text-sm">
+<div class="px-4 py-3 border-b border-slate-200/50 dark:border-slate-800/50">
+<span class="text-xs font-mono font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">🛠 Software & Tools</span>
+</div>
 <a href="#news-01" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-slate-800 bg-white dark:bg-slate-800/20 no-underline">
-<span class="font-mono text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-wide">01. Market</span>
-<span class="font-medium text-slate-900 dark:text-slate-100 group-hover:text-slate-700">AI·첨단바이오 스타트업, 특허 초고속 심사로 시장 진입 가속화</span>
+<span class="font-mono text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-wide">01. Tool</span>
+<span class="font-medium text-slate-900 dark:text-slate-100 group-hover:text-slate-700">기업용 AI 에이전트 감시 도구 '오픈클로' 출시</span>
 </a>
 <a href="#news-02" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-800/10 border-b border-slate-100 dark:border-slate-800/50 no-underline">
-<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">02. Infra</span>
-<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">기가와트(GW)급 AI 데이터센터 관리자 수요 폭발, 몸값 수백억에 달해</span>
+<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">02. Update</span>
+<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">마키나락스, AI 운영체제 '런웨이 2.0' 공개</span>
 </a>
 <a href="#news-03" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-800/10 border-b border-slate-100 dark:border-slate-800/50 no-underline">
-<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">03. AI Research</span>
-<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">딥마인드 출신 연구원, '초인 지능' 개발 스타트업으로 유럽 최대 시드 투자 유치 추진</span>
+<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">03. Research</span>
+<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">KAIST, 3인칭 영상을 1인칭으로 바꿔주는 AI 모델 개발</span>
 </a>
 <a href="#news-04" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-800/10 border-b border-slate-100 dark:border-slate-800/50 no-underline">
-<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">04. Software</span>
-<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">삼성, 갤럭시 AI에 Perplexity 통합… 멀티 에이전트 생태계 구축</span>
+<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">04. Tool</span>
+<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">Guide Labs, 쉽게 이해할 수 있는 새로운 LLM 공개</span>
 </a>
 <a href="#news-05" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-800/10 border-b border-slate-100 dark:border-slate-800/50 no-underline">
-<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">05. Product</span>
-<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">삼부시스템, 산업 현장용 AI 코파일럿(Copilot) 출시…말로 묻고 즉시 답변</span>
+<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">05. App</span>
+<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">AI, 책 내용을 그대로 베낄 수 있다?</span>
 </a>
+<div class="px-4 py-3 border-b border-slate-200/50 dark:border-slate-800/50">
+<span class="text-xs font-mono font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">📰 AI News</span>
+</div>
 <a href="#news-06" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-800/10 border-b border-slate-100 dark:border-slate-800/50 no-underline">
 <span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">06. Market</span>
-<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">현대차그룹, 새만금에 대규모 투자…AI·수소·로봇 사업 추진</span>
+<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">챗GPT, 업무보다 개인 용도로 더 많이 쓴다?</span>
 </a>
 <a href="#news-07" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-800/10 border-b border-slate-100 dark:border-slate-800/50 no-underline">
-<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">07. AI Research</span>
-<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">오픈AI, 캐나다 총격 사건 8개월 전 위험 감지…신고는 안 해</span>
+<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">07. Policy</span>
+<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">방송 3사, 오픈AI에 '뉴스 무단 이용' 소송</span>
+</a>
+<a href="#news-08" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-800/10 border-b border-slate-100 dark:border-slate-800/50 no-underline">
+<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">08. Market</span>
+<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">오픈AI, 기업 시장 공략 위해 컨설팅 업체와 손잡다</span>
+</a>
+<a href="#news-09" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-800/10 border-b border-slate-100 dark:border-slate-800/50 no-underline">
+<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">09. Industry</span>
+<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">토요타, 자동차 공장에 휴머노이드 로봇 도입</span>
+</a>
+<a href="#news-10" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-800/10 border-b border-slate-100 dark:border-slate-800/50 no-underline">
+<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">10. Opinion</span>
+<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">AI 에이전트가 경제를 망칠 수도 있다?</span>
 </a>
 </div>
 </aside>
@@ -176,38 +195,45 @@ document.addEventListener('click', function() {
 </div>
 <div class="mb-2 p-6 bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-100 dark:border-slate-800">
 <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed serif-text italic">
-오늘의 AI 및 테크 뉴스는 AI 인프라 구축 경쟁 심화, AI 모델의 잠재적 위험성, 그리고 AI 기술의 산업 현장 적용 확대를 중심으로 전개됩니다. 특히 대규모 데이터센터 관리자 수요 폭발과 AI 스타트업 투자 유치 경쟁이 두드러집니다.
+오늘의 AI 뉴스는 챗GPT의 개인적 용도 증가와 AI 모델의 저작권 침해 논란, 그리고 기업들의 AI 도입 경쟁 심화 소식을 담고 있습니다. 새로운 AI 도구와 플랫폼 소식도 함께 전해드립니다.
 </p>
+</div>
+<div class="flex items-center gap-3 pt-4 pb-2">
+<span class="text-2xl">🛠</span>
+<div>
+<h2 class="text-lg font-sans font-bold text-slate-900 dark:text-slate-100">Software & Tools</h2>
+<p class="text-sm text-slate-500 dark:text-slate-400">직접 써볼 수 있는 AI 도구와 서비스 소식</p>
+</div>
 </div>
 <div id="news-01" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
 <div class="flex items-center gap-3 mb-1">
-<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">01. Market</span>
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">01. Tool</span>
 </div>
 <h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
-AI·첨단바이오 스타트업, 특허 초고속 심사로 시장 진입 가속화
+기업용 AI 에이전트 감시 도구 '오픈클로' 출시
 </h3>
 <p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
-특허청이 AI 및 첨단 바이오 스타트업을 대상으로 특허 초고속 심사 트랙을 신설하여, 1개월 내에 특허 심사 결과를 받을 수 있도록 지원합니다. 이는 스타트업의 시장 진입 속도를 높이고 기술 경쟁력을 강화하는 데 기여할 것으로 예상됩니다.
+AI 스타트업 런레이어가 기업용 '오픈클로'를 출시했습니다. 직원들이 사용하는 AI 에이전트를 실시간으로 감시하고 통제하여 보안 위험을 줄이고, AI 도구를 회사 관리 체계 안으로 편입시키는 솔루션입니다. 이제 기업은 AI 사용을 더 안전하게 관리할 수 있습니다. sourceIndex: 11
 </p>
 <div class="pt-3 border-t border-slate-100 dark:border-slate-800">
-<a href="https://www.etnews.com/20260223000166" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
+<a href="https://www.aitimes.com/news/articleView.html?idxno=207088" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm6.75-3a.75.75 0 010 1.5h2.44L8.22 9.22a.75.75 0 101.06 1.06L14.5 5.06v2.44a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5z" clip-rule="evenodd"/></svg>
-전자신문
+AI타임스
 </a>
 </div>
 </div>
 <div id="news-02" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
 <div class="flex items-center gap-3 mb-1">
-<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">02. Infra</span>
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">02. Update</span>
 </div>
 <h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
-기가와트(GW)급 AI 데이터센터 관리자 수요 폭발, 몸값 수백억에 달해
+마키나락스, AI 운영체제 '런웨이 2.0' 공개
 </h3>
 <p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
-대규모 AI 데이터센터 건설이 본격화되면서 이를 설계하고 총괄할 인프라 전문가에 대한 수요가 급증하고 있습니다. 1GW 이상 전력을 사용하는 초대형 캠퍼스 설계 및 운영 경험을 가진 인력은 극히 제한적이어서, 이들의 몸값이 수백억 원에 달하는 수준으로 치솟고 있습니다.
+산업 AI 전문 기업 마키나락스가 AI 운영체제 '런웨이 2.0'을 선보입니다. 데이터, GPU, 모델, 애플리케이션을 통합 관리하고, 기업 거버넌스 및 보안 기능을 강화했습니다. AI 모델 관리를 넘어 전체 AI 시스템 운영을 효율화할 수 있습니다. sourceIndex: 16
 </p>
 <div class="pt-3 border-t border-slate-100 dark:border-slate-800">
-<a href="https://www.aitimes.com/news/articleView.html?idxno=207046" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
+<a href="https://www.aitimes.com/news/articleView.html?idxno=207116" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm6.75-3a.75.75 0 010 1.5h2.44L8.22 9.22a.75.75 0 101.06 1.06L14.5 5.06v2.44a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5z" clip-rule="evenodd"/></svg>
 AI타임스
 </a>
@@ -215,16 +241,16 @@ AI타임스
 </div>
 <div id="news-03" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
 <div class="flex items-center gap-3 mb-1">
-<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">03. AI Research</span>
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">03. Research</span>
 </div>
 <h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
-딥마인드 출신 연구원, '초인 지능' 개발 스타트업으로 유럽 최대 시드 투자 유치 추진
+KAIST, 3인칭 영상을 1인칭으로 바꿔주는 AI 모델 개발
 </h3>
 <p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
-딥마인드 출신 핵심 연구원 데이비드 실버가 '초인 지능(superhuman intelligence)' 개발을 목표로 스타트업 'Ineffable Intelligence'를 설립하고, 10억 달러 규모의 시드 투자를 추진 중입니다. 이는 유럽 스타트업 역사상 최대 규모의 첫 투자 유치가 될 전망입니다.
+KAIST에서 관찰자 시점 영상을 바탕으로 1인칭 시점 영상을 생성하는 AI 모델 '에고엑스'를 개발했습니다. 액션캠 없이도 1인칭 시점 영상을 만들 수 있어 로봇 학습 데이터 제작에 활용될 수 있습니다. 로봇이 세상을 보는 방식을 더 쉽게 학습시킬 수 있게 됩니다. sourceIndex: 17
 </p>
 <div class="pt-3 border-t border-slate-100 dark:border-slate-800">
-<a href="https://www.aitimes.com/news/articleView.html?idxno=207047" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
+<a href="https://www.aitimes.com/news/articleView.html?idxno=207104" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm6.75-3a.75.75 0 010 1.5h2.44L8.22 9.22a.75.75 0 101.06 1.06L14.5 5.06v2.44a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5z" clip-rule="evenodd"/></svg>
 AI타임스
 </a>
@@ -232,36 +258,43 @@ AI타임스
 </div>
 <div id="news-04" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
 <div class="flex items-center gap-3 mb-1">
-<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">04. Software</span>
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">04. Tool</span>
 </div>
 <h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
-삼성, 갤럭시 AI에 Perplexity 통합… 멀티 에이전트 생태계 구축
+Guide Labs, 쉽게 이해할 수 있는 새로운 LLM 공개
 </h3>
 <p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
-삼성전자가 갤럭시 AI에 AI 검색 엔진 Perplexity를 통합하여 사용자가 다양한 AI 에이전트를 활용할 수 있는 '멀티 에이전트 생태계(multi-agent ecosystem)'를 구축합니다. 갤럭시 S26 사용자들은 'Hey, Plex'라는 명령어로 Perplexity를 호출할 수 있게 됩니다.
+Guide Labs에서 80억 개의 파라미터를 가진 LLM(사람처럼 글을 쓰는 AI 모델)인 Steerling-8B를 오픈소스로 공개했습니다. 이 모델은 작동 방식을 쉽게 해석할 수 있도록 설계되어 AI의 투명성을 높이는 데 기여합니다. AI 모델이 왜 그런 결정을 내렸는지 이해하는 데 도움이 됩니다. sourceIndex: 14
 </p>
 <div class="pt-3 border-t border-slate-100 dark:border-slate-800">
-<a href="https://www.theverge.com/tech/882921/samsung-is-adding-perplexity-to-galaxy-ai" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
+<a href="https://techcrunch.com/2026/02/23/guide-labs-debuts-a-new-kind-of-interpretable-llm/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm6.75-3a.75.75 0 010 1.5h2.44L8.22 9.22a.75.75 0 101.06 1.06L14.5 5.06v2.44a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5z" clip-rule="evenodd"/></svg>
-The Verge
+TechCrunch
 </a>
 </div>
 </div>
 <div id="news-05" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
 <div class="flex items-center gap-3 mb-1">
-<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">05. Product</span>
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">05. App</span>
 </div>
 <h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
-삼부시스템, 산업 현장용 AI 코파일럿(Copilot) 출시…말로 묻고 즉시 답변
+AI, 책 내용을 그대로 베낄 수 있다?
 </h3>
 <p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
-삼부시스템이 산업 현장에 특화된 산업용 AI 코파일럿(Copilot)을 출시하여, 작업자가 음성으로 질문하면 즉각적으로 문제 해결을 돕는 솔루션을 제공합니다. 이는 제조 현장의 설비 및 공정 데이터를 기반으로 실시간 의사 결정을 지원하여 생산성 향상에 기여할 것으로 기대됩니다.
+AI 모델이 학습 데이터에서 책 내용을 거의 그대로 복사할 수 있다는 연구 결과가 나왔습니다. 기존 AI 기업들이 주장하던 'AI는 저작물을 저장하지 않는다'는 주장에 의문이 제기되고 있습니다. AI가 학습 데이터에 있는 정보를 얼마나 잘 '기억'하는지 보여주는 사례입니다. sourceIndex: 13
 </p>
 <div class="pt-3 border-t border-slate-100 dark:border-slate-800">
-<a href="https://www.etnews.com/20260223000102" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
+<a href="https://www.aitimes.com/news/articleView.html?idxno=207074" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm6.75-3a.75.75 0 010 1.5h2.44L8.22 9.22a.75.75 0 101.06 1.06L14.5 5.06v2.44a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5z" clip-rule="evenodd"/></svg>
-전자신문
+AI타임스
 </a>
+</div>
+</div>
+<div class="flex items-center gap-3 pt-4 pb-2">
+<span class="text-2xl">📰</span>
+<div>
+<h2 class="text-lg font-sans font-bold text-slate-900 dark:text-slate-100">AI News</h2>
+<p class="text-sm text-slate-500 dark:text-slate-400">알아두면 좋은 AI 업계 동향과 시사 뉴스</p>
 </div>
 </div>
 <div id="news-06" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
@@ -269,39 +302,90 @@ The Verge
 <span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">06. Market</span>
 </div>
 <h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
-현대차그룹, 새만금에 대규모 투자…AI·수소·로봇 사업 추진
+챗GPT, 업무보다 개인 용도로 더 많이 쓴다?
 </h3>
 <p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
-현대차그룹이 전북 새만금에 수조 원을 투자하여 AI, 수소, 로보틱스 등 미래 신사업 육성에 나섭니다. 산업통상부 등 관계 부처와 업무협약(MOU)을 체결할 예정이며, 구체적인 투자 계획은 곧 발표될 것으로 예상됩니다.
+챗GPT를 업무용보다 개인적인 용도로 사용하는 비중이 늘고 있다는 분석이 나왔습니다. 이는 기업용 구독 확대에는 부정적이지만, 광고 사업에는 긍정적인 영향을 줄 수 있습니다. 챗GPT가 광고 플랫폼으로 진화할 가능성이 커지고 있습니다. sourceIndex: 10
 </p>
 <div class="pt-3 border-t border-slate-100 dark:border-slate-800">
-<a href="https://www.etnews.com/20260223000133" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
+<a href="https://www.aitimes.com/news/articleView.html?idxno=207098" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm6.75-3a.75.75 0 010 1.5h2.44L8.22 9.22a.75.75 0 101.06 1.06L14.5 5.06v2.44a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5z" clip-rule="evenodd"/></svg>
-전자신문
+AI타임스
 </a>
 </div>
 </div>
 <div id="news-07" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
 <div class="flex items-center gap-3 mb-1">
-<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">07. AI Research</span>
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">07. Policy</span>
 </div>
 <h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
-오픈AI, 캐나다 총격 사건 8개월 전 위험 감지…신고는 안 해
+방송 3사, 오픈AI에 '뉴스 무단 이용' 소송
 </h3>
 <p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
-오픈AI가 캐나다 총격 사건 용의자의 챗GPT(ChatGPT) 사용 기록에서 범행 8개월 전 총기 폭력 관련 시나리오 작성을 감지했지만, 수사 당국에 신고하지 않은 것으로 밝혀졌습니다. 이는 AI 모델의 잠재적 위험성과 윤리적 책임에 대한 논쟁을 다시 불러일으킬 것으로 보입니다.
+KBS, MBC, SBS 등 지상파 방송 3사가 챗GPT 개발사 오픈AI를 상대로 저작권 침해 소송을 제기했습니다. 챗GPT 학습에 뉴스 콘텐츠를 무단으로 활용했다는 이유입니다. AI 학습 데이터의 저작권 문제가 다시 한번 불거지고 있습니다. sourceIndex: 15
 </p>
 <div class="pt-3 border-t border-slate-100 dark:border-slate-800">
-<a href="https://www.aitimes.com/news/articleView.html?idxno=207044" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
+<a href="https://www.aitimes.com/news/articleView.html?idxno=207120" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm6.75-3a.75.75 0 010 1.5h2.44L8.22 9.22a.75.75 0 101.06 1.06L14.5 5.06v2.44a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5z" clip-rule="evenodd"/></svg>
 AI타임스
+</a>
+</div>
+</div>
+<div id="news-08" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
+<div class="flex items-center gap-3 mb-1">
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">08. Market</span>
+</div>
+<h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
+오픈AI, 기업 시장 공략 위해 컨설팅 업체와 손잡다
+</h3>
+<p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+오픈AI가 기업 시장 확대를 위해 대형 컨설팅 업체들과 파트너십을 맺었습니다. OpenAI Frontier AI 에이전트 플랫폼의 도입을 늘리기 위한 전략입니다. AI 기술이 기업 시장에 본격적으로 확산될 것으로 예상됩니다. sourceIndex: 7
+</p>
+<div class="pt-3 border-t border-slate-100 dark:border-slate-800">
+<a href="https://techcrunch.com/2026/02/23/openai-calls-in-the-consultants-for-its-enterprise-push/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm6.75-3a.75.75 0 010 1.5h2.44L8.22 9.22a.75.75 0 101.06 1.06L14.5 5.06v2.44a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5z" clip-rule="evenodd"/></svg>
+TechCrunch
+</a>
+</div>
+</div>
+<div id="news-09" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
+<div class="flex items-center gap-3 mb-1">
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">09. Industry</span>
+</div>
+<h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
+토요타, 자동차 공장에 휴머노이드 로봇 도입
+</h3>
+<p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+토요타가 캐나다 공장에 휴머노이드 로봇 '디지트' 7대를 도입합니다. 어질리티 로보틱스와 계약을 맺고 라브4 생산 라인에 투입할 예정입니다. 제조업 현장에서 로봇 활용이 점점 더 늘어날 것으로 보입니다. sourceIndex: 4
+</p>
+<div class="pt-3 border-t border-slate-100 dark:border-slate-800">
+<a href="https://www.etnews.com/20260223000289" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm6.75-3a.75.75 0 010 1.5h2.44L8.22 9.22a.75.75 0 101.06 1.06L14.5 5.06v2.44a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5z" clip-rule="evenodd"/></svg>
+전자신문
+</a>
+</div>
+</div>
+<div id="news-10" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
+<div class="flex items-center gap-3 mb-1">
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">10. Opinion</span>
+</div>
+<h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
+AI 에이전트가 경제를 망칠 수도 있다?
+</h3>
+<p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+AI 에이전트가 경제에 미칠 부정적인 영향에 대한 경고가 나왔습니다. Citrini Research는 AI 에이전트 확산으로 실업률이 증가하고 주식 시장 가치가 하락할 수 있다는 보고서를 발표했습니다. AI 발전의 어두운 면을 보여주는 시나리오입니다. sourceIndex: 20
+</p>
+<div class="pt-3 border-t border-slate-100 dark:border-slate-800">
+<a href="https://techcrunch.com/2026/02/23/how-ai-agents-could-destroy-the-economy/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm6.75-3a.75.75 0 010 1.5h2.44L8.22 9.22a.75.75 0 101.06 1.06L14.5 5.06v2.44a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5z" clip-rule="evenodd"/></svg>
+TechCrunch
 </a>
 </div>
 </div>
 <div class="mt-4 p-6 bg-slate-100 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700">
 <h4 class="text-xs font-bold font-mono uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-3">Today's Remark</h4>
 <p class="serif-text text-lg text-slate-700 dark:text-slate-300 leading-relaxed italic">
-"오늘 뉴스는 AI 기술 발전과 함께 인프라 투자 및 윤리적 책임에 대한 논의가 중요해지고 있음을 보여줍니다. 특히 AI 데이터센터 구축 경쟁 심화와 AI 모델의 잠재적 위험성 간의 균형점을 찾는 것이 중요한 과제가 될 것입니다."
+"오늘은 챗GPT의 사용 패턴 변화, AI 모델의 저작권 문제, 그리고 기업들의 AI 도입 움직임이 두드러진 하루였습니다. 동시에 AI 기술의 잠재적 위험에 대한 경고도 제기되며, AI 발전의 양면성을 다시 한번 생각하게 합니다."
 </p>
 </div>
 </section>

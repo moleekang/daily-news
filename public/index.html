@@ -5,12 +5,28 @@
 <meta http-equiv="refresh" content="0; url=/output/">
 <title>AI Daily Briefing</title>
 <script>
-  // 최신 daily HTML로 리다이렉트
-  const today = new Date();
-  const y = today.getFullYear();
-  const m = String(today.getMonth() + 1).padStart(2, '0');
-  const d = String(today.getDate()).padStart(2, '0');
-  window.location.href = `/output/daily-${y}${m}${d}.html`;
+  // 최신 daily HTML로 리다이렉트 (오늘 파일이 없으면 어제 파일로 fallback)
+  async function redirectToLatest() {
+    const today = new Date();
+    for (let i = 0; i < 7; i++) {
+      const d = new Date(today);
+      d.setDate(d.getDate() - i);
+      const y = d.getFullYear();
+      const m = String(d.getMonth() + 1).padStart(2, '0');
+      const dd = String(d.getDate()).padStart(2, '0');
+      const url = `/output/daily-${y}${m}${dd}.html`;
+      try {
+        const res = await fetch(url, { method: 'HEAD' });
+        if (res.ok) { window.location.href = url; return; }
+      } catch(e) {}
+    }
+    // 7일 내 파일이 없으면 오늘 날짜로 시도
+    const y = today.getFullYear();
+    const m = String(today.getMonth() + 1).padStart(2, '0');
+    const dd = String(today.getDate()).padStart(2, '0');
+    window.location.href = `/output/daily-${y}${m}${dd}.html`;
+  }
+  redirectToLatest();
 </script>
 </head>
 <body>

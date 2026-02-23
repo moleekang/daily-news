@@ -26,6 +26,12 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: npm run collect
 
+      - name: Cleanup old briefings (keep 30 days)
+        run: |
+          find output -name "daily-*.html" -type f -mtime +30 -delete 2>/dev/null || true
+          echo "Cleanup done. Remaining files:"
+          ls -la output/
+
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"

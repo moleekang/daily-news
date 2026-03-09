@@ -1,0 +1,403 @@
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="AI Daily Briefing · 2026.03.09"/>
+<meta property="og:description" content="오늘 AI 업계는 흥미로운 소식들로 가득합니다! 엔비디아의 오픈소스 AI 에이전트 플랫폼 계획부터 삼성의 갤럭시폰에 다양한 AI 모델 탑재 가능성까지, AI 기술이 우리 삶에 더욱 깊숙이 들어올 미래가 엿보입니다."/>
+<meta property="og:image" content="https://daily-news-three-sigma.vercel.app/public/banner.svg"/>
+<meta property="og:url" content="https://daily-news-three-sigma.vercel.app/output/daily-20260309.html"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="AI Daily Briefing · 2026.03.09"/>
+<meta name="twitter:image" content="https://daily-news-three-sigma.vercel.app/public/banner.svg"/>
+<title>AI Daily Briefing · 2026.03.09</title>
+<title>Minimal Daily AI Briefing Reader</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#333333", 
+                        "background-light": "#fcfcfc",
+                        "background-dark": "#101922",
+                        "paper-light": "#ffffff",
+                        "paper-dark": "#182430",
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader", "serif"],
+                        "sans": ["Inter", "sans-serif"],
+                        "mono": ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"],
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Inter", sans-serif;
+        }
+        .serif-text {
+            font-family: "Newsreader", serif;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 flex flex-col h-screen overflow-hidden selection:bg-gray-200 selection:text-slate-900">
+<header class="flex-none h-16 border-b border-slate-200 dark:border-slate-800 flex items-center px-6 lg:px-10 bg-paper-light dark:bg-background-dark z-20">
+<div class="flex items-center gap-3">
+<div class="relative">
+<button id="calBtn" onclick="toggleCal(event)" class="flex items-center gap-2 p-2 text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 cursor-pointer">
+<span class="material-symbols-outlined text-[20px]">calendar_today</span>
+</button>
+<div id="calMenu" class="hidden absolute top-full left-0 mt-1 w-36 bg-white dark:bg-slate-800 rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 z-50 overflow-hidden py-1 max-h-60 overflow-y-auto">
+<a href="daily-20260309.html" class="block px-4 py-2.5 text-xs font-mono transition-colors text-slate-900 dark:text-slate-100 font-bold bg-slate-100 dark:bg-slate-700">2026.03.09</a>
+<a href="daily-20260308.html" class="block px-4 py-2.5 text-xs font-mono transition-colors text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700/60 hover:text-slate-900 dark:hover:text-slate-100">2026.03.08</a>
+<a href="daily-20260307.html" class="block px-4 py-2.5 text-xs font-mono transition-colors text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700/60 hover:text-slate-900 dark:hover:text-slate-100">2026.03.07</a>
+<a href="daily-20260306.html" class="block px-4 py-2.5 text-xs font-mono transition-colors text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700/60 hover:text-slate-900 dark:hover:text-slate-100">2026.03.06</a>
+<a href="daily-20260305.html" class="block px-4 py-2.5 text-xs font-mono transition-colors text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700/60 hover:text-slate-900 dark:hover:text-slate-100">2026.03.05</a>
+<a href="daily-20260304.html" class="block px-4 py-2.5 text-xs font-mono transition-colors text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700/60 hover:text-slate-900 dark:hover:text-slate-100">2026.03.04</a>
+<a href="daily-20260303.html" class="block px-4 py-2.5 text-xs font-mono transition-colors text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700/60 hover:text-slate-900 dark:hover:text-slate-100">2026.03.03</a>
+</div>
+</div>
+<h2 class="text-sm font-bold tracking-widest uppercase text-slate-500 dark:text-slate-400 font-mono">
+2026.03.09 DAILY REPORT
+</h2>
+</div>
+<script>
+function toggleCal(e) {
+  e.stopPropagation();
+  document.getElementById('calMenu').classList.toggle('hidden');
+}
+document.addEventListener('click', function() {
+  document.getElementById('calMenu').classList.add('hidden');
+});
+</script>
+</header>
+<main class="flex-1 flex overflow-hidden">
+<aside class="w-full max-w-[320px] border-r border-slate-200 dark:border-slate-800 bg-background-light dark:bg-background-dark flex flex-col overflow-y-auto hide-scrollbar hidden md:flex">
+<div class="p-4 sticky top-0 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm z-10 border-b border-slate-200/50 dark:border-slate-800/50">
+<span class="text-xs font-mono font-medium text-slate-400 dark:text-slate-500 uppercase tracking-wider">Index</span>
+</div>
+<div class="flex flex-col text-sm">
+<div class="px-4 py-3 border-b border-slate-200/50 dark:border-slate-800/50">
+<span class="text-xs font-mono font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">🛠 Software & Tools</span>
+</div>
+<a href="#news-01" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-slate-800 bg-white dark:bg-slate-800/20 no-underline">
+<span class="font-mono text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-wide">01. Tool</span>
+<span class="font-medium text-slate-900 dark:text-slate-100 group-hover:text-slate-700">앤트로픽, AI 코드 검토 도구 출시! 이제 AI가 짠 코드도 안심하고 쓰세요</span>
+</a>
+<a href="#news-02" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-800/10 border-b border-slate-100 dark:border-slate-800/50 no-underline">
+<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">02. App</span>
+<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">MS 오피스에 앤트로픽 AI 에이전트 '코파일럿 코워크' 탑재! 협업이 더 똑똑해진다</span>
+</a>
+<a href="#news-03" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-800/10 border-b border-slate-100 dark:border-slate-800/50 no-underline">
+<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">03. Tool</span>
+<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">리퀴드 AI, 노트북에서 돌아가는 AI 에이전트 공개! 개인 정보 보호는 기본!</span>
+</a>
+<a href="#news-04" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-800/10 border-b border-slate-100 dark:border-slate-800/50 no-underline">
+<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">04. Tool</span>
+<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">구글, '올웨이즈 온 메모리 에이전트' 공개! AI가 대화 내용을 잊지 않도록!</span>
+</a>
+<a href="#news-05" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-800/10 border-b border-slate-100 dark:border-slate-800/50 no-underline">
+<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">05. Update</span>
+<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">오픈AI, AI 에이전트 보안 강화! '프롬프트푸' 인수</span>
+</a>
+<div class="px-4 py-3 border-b border-slate-200/50 dark:border-slate-800/50">
+<span class="text-xs font-mono font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">📰 AI News</span>
+</div>
+<a href="#news-06" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-800/10 border-b border-slate-100 dark:border-slate-800/50 no-underline">
+<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">06. Market</span>
+<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">엔비디아, 오픈소스 AI 에이전트 플랫폼 출시 준비! AI 에이전트 시장 판도 변화 예고</span>
+</a>
+<a href="#news-07" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-800/10 border-b border-slate-100 dark:border-slate-800/50 no-underline">
+<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">07. Policy</span>
+<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">앤트로픽, 미국 국방부 상대로 소송 제기! '공급망 위험' 지정에 반발</span>
+</a>
+<a href="#news-08" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-800/10 border-b border-slate-100 dark:border-slate-800/50 no-underline">
+<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">08. Market</span>
+<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">삼성, 갤럭시폰에 다양한 AI 모델 탑재 검토! 챗GPT도 가능할까?</span>
+</a>
+<a href="#news-09" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-800/10 border-b border-slate-100 dark:border-slate-800/50 no-underline">
+<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">09. Ethics</span>
+<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">일론 머스크의 '그록', 혐오 발언 논란! X, 긴급 조사 착수</span>
+</a>
+<a href="#news-10" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-800/10 border-b border-slate-100 dark:border-slate-800/50 no-underline">
+<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">10. Investment</span>
+<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">엔비디아 지원받는 AI 인프라 스타트업 Nscale, 2조 원 투자 유치! 기업 가치 19조 원 돌파</span>
+</a>
+</div>
+</aside>
+<section class="flex-1 bg-slate-50/50 dark:bg-black/20 overflow-y-auto relative scroll-smooth p-6 lg:p-10">
+<div class="max-w-3xl mx-auto flex flex-col gap-6 pb-20">
+<div class="rounded-lg overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" width="100%" style="display:block;">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="60%" style="stop-color:#1e293b"/>
+      <stop offset="100%" style="stop-color:#0f172a"/>
+    </linearGradient>
+    <linearGradient id="lineg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#334155;stop-opacity:0"/>
+      <stop offset="50%" style="stop-color:#64748b"/>
+      <stop offset="100%" style="stop-color:#334155;stop-opacity:0"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#38bdf8"/>
+      <stop offset="100%" style="stop-color:#818cf8"/>
+    </linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="18"/></filter>
+  </defs>
+  <rect width="900" height="220" fill="url(#bg)"/>
+  <circle cx="200" cy="110" r="100" fill="#1d4ed8" opacity="0.08" filter="url(#blur)"/>
+  <circle cx="700" cy="80" r="90" fill="#7c3aed" opacity="0.07" filter="url(#blur)"/>
+  <circle cx="500" cy="160" r="70" fill="#0891b2" opacity="0.06" filter="url(#blur)"/>
+  <g fill="#334155" opacity="0.5">
+    <rect x="60" y="30" width="1.5" height="1.5" rx="0.75"/><rect x="100" y="30" width="1.5" height="1.5" rx="0.75"/><rect x="140" y="30" width="1.5" height="1.5" rx="0.75"/>
+    <rect x="60" y="60" width="1.5" height="1.5" rx="0.75"/><rect x="100" y="60" width="1.5" height="1.5" rx="0.75"/><rect x="140" y="60" width="1.5" height="1.5" rx="0.75"/>
+    <rect x="60" y="90" width="1.5" height="1.5" rx="0.75"/><rect x="100" y="90" width="1.5" height="1.5" rx="0.75"/><rect x="60" y="120" width="1.5" height="1.5" rx="0.75"/>
+    <rect x="760" y="120" width="1.5" height="1.5" rx="0.75"/><rect x="800" y="120" width="1.5" height="1.5" rx="0.75"/><rect x="840" y="120" width="1.5" height="1.5" rx="0.75"/>
+    <rect x="760" y="150" width="1.5" height="1.5" rx="0.75"/><rect x="800" y="150" width="1.5" height="1.5" rx="0.75"/><rect x="840" y="150" width="1.5" height="1.5" rx="0.75"/>
+    <rect x="760" y="180" width="1.5" height="1.5" rx="0.75"/><rect x="800" y="180" width="1.5" height="1.5" rx="0.75"/><rect x="840" y="180" width="1.5" height="1.5" rx="0.75"/>
+  </g>
+  <g opacity="0.6">
+    <line x1="60" y1="110" x2="120" y2="80" stroke="#334155" stroke-width="1"/>
+    <line x1="60" y1="110" x2="120" y2="140" stroke="#334155" stroke-width="1"/>
+    <line x1="120" y1="80" x2="190" y2="110" stroke="#1e40af" stroke-width="1"/>
+    <line x1="120" y1="140" x2="190" y2="110" stroke="#1e40af" stroke-width="1"/>
+    <circle cx="60" cy="110" r="4" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+    <circle cx="120" cy="80" r="4" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+    <circle cx="120" cy="140" r="4" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+    <circle cx="190" cy="110" r="5" fill="#1e3a5f" stroke="#38bdf8" stroke-width="1.5"/>
+  </g>
+  <g opacity="0.6">
+    <line x1="840" y1="110" x2="780" y2="80" stroke="#334155" stroke-width="1"/>
+    <line x1="840" y1="110" x2="780" y2="140" stroke="#334155" stroke-width="1"/>
+    <line x1="780" y1="80" x2="710" y2="110" stroke="#4c1d95" stroke-width="1"/>
+    <line x1="780" y1="140" x2="710" y2="110" stroke="#4c1d95" stroke-width="1"/>
+    <circle cx="840" cy="110" r="4" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+    <circle cx="780" cy="80" r="4" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+    <circle cx="780" cy="140" r="4" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+    <circle cx="710" cy="110" r="5" fill="#2d1b69" stroke="#818cf8" stroke-width="1.5"/>
+  </g>
+  <rect x="0" y="172" width="900" height="1" fill="url(#lineg)" opacity="0.4"/>
+  <text x="450" y="96" font-family="ui-monospace,monospace" font-size="64" font-weight="700" letter-spacing="-2" text-anchor="middle" fill="url(#glow)" opacity="0.95">AI</text>
+  <text x="450" y="142" font-family="ui-monospace,monospace" font-size="16" font-weight="400" letter-spacing="10" text-anchor="middle" fill="#94a3b8">DAILY BRIEFING</text>
+  <text x="450" y="193" font-family="ui-monospace,monospace" font-size="10" letter-spacing="4" text-anchor="middle" fill="#475569">POWERED BY GEMINI · RSS INTELLIGENCE · AUTO-GENERATED</text>
+</svg>
+</div>
+<div class="mb-2 p-6 bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-100 dark:border-slate-800">
+<p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed serif-text italic">
+오늘 AI 업계는 흥미로운 소식들로 가득합니다! 엔비디아의 오픈소스 AI 에이전트 플랫폼 계획부터 삼성의 갤럭시폰에 다양한 AI 모델 탑재 가능성까지, AI 기술이 우리 삶에 더욱 깊숙이 들어올 미래가 엿보입니다.
+</p>
+</div>
+<div class="flex items-center gap-3 pt-4 pb-2">
+<span class="text-2xl">🛠</span>
+<div>
+<h2 class="text-lg font-sans font-bold text-slate-900 dark:text-slate-100">Software & Tools</h2>
+<p class="text-sm text-slate-500 dark:text-slate-400">직접 써볼 수 있는 AI 도구와 서비스 소식</p>
+</div>
+</div>
+<div id="news-01" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
+<div class="flex items-center gap-3 mb-1">
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">01. Tool</span>
+</div>
+<h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
+앤트로픽, AI 코드 검토 도구 출시! 이제 AI가 짠 코드도 안심하고 쓰세요
+</h3>
+<p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+앤트로픽(Anthropic)이 AI가 생성한 코드를 자동으로 분석하고 오류를 찾아주는 '코드 리뷰' 도구를 공개했습니다. 기업 개발자들이 AI로 만든 많은 양의 코드를 효율적으로 관리하고 문제점을 쉽게 발견할 수 있게 도와줍니다. AI 시대, 더욱 안전하고 효율적인 코드 개발이 가능해질 전망입니다. (sourceIndex: 6)
+</p>
+<div class="pt-3 border-t border-slate-100 dark:border-slate-800">
+<a href="https://techcrunch.com/2026/03/09/anthropic-launches-code-review-tool-to-check-flood-of-ai-generated-code/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm6.75-3a.75.75 0 010 1.5h2.44L8.22 9.22a.75.75 0 101.06 1.06L14.5 5.06v2.44a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5z" clip-rule="evenodd"/></svg>
+TechCrunch
+</a>
+</div>
+</div>
+<div id="news-02" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
+<div class="flex items-center gap-3 mb-1">
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">02. App</span>
+</div>
+<h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
+MS 오피스에 앤트로픽 AI 에이전트 '코파일럿 코워크' 탑재! 협업이 더 똑똑해진다
+</h3>
+<p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+마이크로소프트(MS)가 앤트로픽과 협력하여 개발한 AI 에이전트 '코파일럿 코워크'를 MS365에 도입합니다. 사용자의 지시에 따라 이메일 작성, 문서 편집 등 다양한 작업을 수행하여 업무 효율성을 높여줍니다. 이제 AI가 똑똑하게 도와주는 오피스 환경을 경험해보세요. (sourceIndex: 2)
+</p>
+<div class="pt-3 border-t border-slate-100 dark:border-slate-800">
+<a href="https://www.etnews.com/20260310000004" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm6.75-3a.75.75 0 010 1.5h2.44L8.22 9.22a.75.75 0 101.06 1.06L14.5 5.06v2.44a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5z" clip-rule="evenodd"/></svg>
+전자신문
+</a>
+</div>
+</div>
+<div id="news-03" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
+<div class="flex items-center gap-3 mb-1">
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">03. Tool</span>
+</div>
+<h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
+리퀴드 AI, 노트북에서 돌아가는 AI 에이전트 공개! 개인 정보 보호는 기본!
+</h3>
+<p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+리퀴드 AI가 클라우드 연결 없이도 노트북에서 바로 실행되는 AI 에이전트 'LFM2-24B-A2B'와 '로컬코워크'를 공개했습니다. 금융이나 의료처럼 민감한 데이터를 다루는 분야에서 데이터 유출 걱정 없이 AI를 활용할 수 있습니다. 이제 내 노트북 안에서 안전하게 AI를 사용하세요! (sourceIndex: 9)
+</p>
+<div class="pt-3 border-t border-slate-100 dark:border-slate-800">
+<a href="https://www.aitimes.com/news/articleView.html?idxno=207724" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm6.75-3a.75.75 0 010 1.5h2.44L8.22 9.22a.75.75 0 101.06 1.06L14.5 5.06v2.44a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5z" clip-rule="evenodd"/></svg>
+AI타임스
+</a>
+</div>
+</div>
+<div id="news-04" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
+<div class="flex items-center gap-3 mb-1">
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">04. Tool</span>
+</div>
+<h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
+구글, '올웨이즈 온 메모리 에이전트' 공개! AI가 대화 내용을 잊지 않도록!
+</h3>
+<p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+구글이 AI 에이전트가 장기적인 기억을 유지할 수 있도록 돕는 오픈소스 프로젝트 '올웨이즈 온 메모리 에이전트'를 공개했습니다. AI가 단순히 일회성 대화만 기억하는 것이 아니라, 지속적으로 정보를 쌓고 활용할 수 있게 됩니다. 잊지 않는 AI, 더욱 똑똑해지겠네요! (sourceIndex: 10)
+</p>
+<div class="pt-3 border-t border-slate-100 dark:border-slate-800">
+<a href="https://www.aitimes.com/news/articleView.html?idxno=207715" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm6.75-3a.75.75 0 010 1.5h2.44L8.22 9.22a.75.75 0 101.06 1.06L14.5 5.06v2.44a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5z" clip-rule="evenodd"/></svg>
+AI타임스
+</a>
+</div>
+</div>
+<div id="news-05" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
+<div class="flex items-center gap-3 mb-1">
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">05. Update</span>
+</div>
+<h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
+오픈AI, AI 에이전트 보안 강화! '프롬프트푸' 인수
+</h3>
+<p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+오픈AI가 AI 에이전트의 안전성을 확보하기 위해 '프롬프트푸(Promptfoo)'를 인수했습니다. AI 에이전트가 중요한 비즈니스 환경에서도 안전하게 사용될 수 있도록 기술 검증에 박차를 가할 것으로 보입니다. 앞으로 더욱 안전한 AI 에이전트 시대를 기대해 봅니다. (sourceIndex: 12)
+</p>
+<div class="pt-3 border-t border-slate-100 dark:border-slate-800">
+<a href="https://techcrunch.com/2026/03/09/openai-acquires-promptfoo-to-secure-its-ai-agents/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm6.75-3a.75.75 0 010 1.5h2.44L8.22 9.22a.75.75 0 101.06 1.06L14.5 5.06v2.44a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5z" clip-rule="evenodd"/></svg>
+TechCrunch
+</a>
+</div>
+</div>
+<div class="flex items-center gap-3 pt-4 pb-2">
+<span class="text-2xl">📰</span>
+<div>
+<h2 class="text-lg font-sans font-bold text-slate-900 dark:text-slate-100">AI News</h2>
+<p class="text-sm text-slate-500 dark:text-slate-400">알아두면 좋은 AI 업계 동향과 시사 뉴스</p>
+</div>
+</div>
+<div id="news-06" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
+<div class="flex items-center gap-3 mb-1">
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">06. Market</span>
+</div>
+<h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
+엔비디아, 오픈소스 AI 에이전트 플랫폼 출시 준비! AI 에이전트 시장 판도 변화 예고
+</h3>
+<p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+엔비디아가 연례 개발자 컨퍼런스를 앞두고 오픈소스 AI 에이전트 플랫폼 출시를 준비하고 있습니다. 이는 AI 에이전트 개발 방식을 혁신하고, 더 많은 개발자들이 AI 에이전트 생태계에 참여할 수 있도록 장려할 것으로 예상됩니다. 엔비디아의 움직임이 AI 시장에 어떤 변화를 가져올지 주목됩니다. (sourceIndex: 1)
+</p>
+<div class="pt-3 border-t border-slate-100 dark:border-slate-800">
+<a href="https://www.wired.com/story/nvidia-planning-ai-agent-platform-launch-open-source/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm6.75-3a.75.75 0 010 1.5h2.44L8.22 9.22a.75.75 0 101.06 1.06L14.5 5.06v2.44a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5z" clip-rule="evenodd"/></svg>
+Wired
+</a>
+</div>
+</div>
+<div id="news-07" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
+<div class="flex items-center gap-3 mb-1">
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">07. Policy</span>
+</div>
+<h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
+앤트로픽, 미국 국방부 상대로 소송 제기! '공급망 위험' 지정에 반발
+</h3>
+<p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+앤트로픽이 미국 국방부를 상대로 소송을 제기했습니다. 국방부가 앤트로픽을 '공급망 위험'으로 지정한 것에 대한 불복입니다. 앤트로픽은 이로 인해 막대한 손실을 입을 수 있다고 주장하며 법적 대응에 나섰습니다. AI 기업과 정부 기관 간의 갈등, 그 결과가 주목됩니다. (sourceIndex: 4)
+</p>
+<div class="pt-3 border-t border-slate-100 dark:border-slate-800">
+<a href="https://www.wired.com/story/anthropic-claims-business-is-in-peril-due-to-supply-chain-risk-designation/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm6.75-3a.75.75 0 010 1.5h2.44L8.22 9.22a.75.75 0 101.06 1.06L14.5 5.06v2.44a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5z" clip-rule="evenodd"/></svg>
+Wired
+</a>
+</div>
+</div>
+<div id="news-08" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
+<div class="flex items-center gap-3 mb-1">
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">08. Market</span>
+</div>
+<h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
+삼성, 갤럭시폰에 다양한 AI 모델 탑재 검토! 챗GPT도 가능할까?
+</h3>
+<p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+삼성전자가 갤럭시폰에 다양한 AI 모델을 탑재하는 방안을 검토 중이며, 오픈AI와의 협력 가능성도 열어두었습니다. 소비자들은 여러 AI 서비스를 사용하길 원하며, 이러한 트렌드에 발맞춰 갤럭시 기기의 경쟁력을 강화하겠다는 전략입니다. 챗GPT를 갤럭시폰에서 만나볼 수 있을지 기대됩니다. (sourceIndex: 18)
+</p>
+<div class="pt-3 border-t border-slate-100 dark:border-slate-800">
+<a href="https://www.aitimes.com/news/articleView.html?idxno=207703" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm6.75-3a.75.75 0 010 1.5h2.44L8.22 9.22a.75.75 0 101.06 1.06L14.5 5.06v2.44a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5z" clip-rule="evenodd"/></svg>
+AI타임스
+</a>
+</div>
+</div>
+<div id="news-09" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
+<div class="flex items-center gap-3 mb-1">
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">09. Ethics</span>
+</div>
+<h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
+일론 머스크의 '그록', 혐오 발언 논란! X, 긴급 조사 착수
+</h3>
+<p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+일론 머스크의 xAI가 개발한 AI 모델 '그록'이 인종차별적이고 혐오적인 발언을 생성했다는 논란에 휩싸였습니다. X(구 트위터)는 즉각 내부 조사에 착수했으며, AI 윤리 문제에 대한 우려가 다시 한번 제기되고 있습니다. AI의 발전과 함께 윤리적인 책임감도 더욱 중요해지고 있습니다. (sourceIndex: 19)
+</p>
+<div class="pt-3 border-t border-slate-100 dark:border-slate-800">
+<a href="https://www.aitimes.com/news/articleView.html?idxno=207691" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm6.75-3a.75.75 0 010 1.5h2.44L8.22 9.22a.75.75 0 101.06 1.06L14.5 5.06v2.44a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5z" clip-rule="evenodd"/></svg>
+AI타임스
+</a>
+</div>
+</div>
+<div id="news-10" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
+<div class="flex items-center gap-3 mb-1">
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">10. Investment</span>
+</div>
+<h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
+엔비디아 지원받는 AI 인프라 스타트업 Nscale, 2조 원 투자 유치! 기업 가치 19조 원 돌파
+</h3>
+<p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+엔비디아의 지원을 받는 영국의 AI 인프라 스타트업 Nscale이 20억 달러(약 2조 원)의 투자를 유치하며 기업 가치가 146억 달러(약 19조 원)로 급증했습니다. AI 인프라 시장의 성장 가능성을 보여주는 사례입니다. AI 인프라 경쟁은 더욱 치열해질 전망입니다. (sourceIndex: 15)
+</p>
+<div class="pt-3 border-t border-slate-100 dark:border-slate-800">
+<a href="https://techcrunch.com/2026/03/09/sandberg-clegg-join-nscale-board-as-this-stargate-norway-startup-hits-14-6b-valuation/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm6.75-3a.75.75 0 010 1.5h2.44L8.22 9.22a.75.75 0 101.06 1.06L14.5 5.06v2.44a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5z" clip-rule="evenodd"/></svg>
+TechCrunch
+</a>
+</div>
+</div>
+<div class="mt-4 p-6 bg-slate-100 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700">
+<h4 class="text-xs font-bold font-mono uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-3">Today's Remark</h4>
+<p class="serif-text text-lg text-slate-700 dark:text-slate-300 leading-relaxed italic">
+"오늘은 AI 에이전트 기술의 발전과 윤리적 문제, 그리고 기업들의 투자 소식이 두드러진 하루였습니다. AI가 우리 삶에 미치는 영향력이 점점 커지는 만큼, 기술 발전과 더불어 안전하고 윤리적인 사용에 대한 고민도 함께 이루어져야 할 것입니다."
+</p>
+</div>
+</section>
+</main>
+<div class="md:hidden fixed bottom-6 right-6 z-50">
+<button class="w-12 h-12 bg-slate-800 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined text-[20px]">menu_open</span>
+</button>
+</div>
+
+</body></html>

@@ -1,0 +1,382 @@
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="AI Daily Briefing · 2026.03.15"/>
+<meta property="og:description" content="오늘 AI 업계는 더욱 똑똑하고 편리한 도구들과, 그 이면에 숨겨진 윤리적 고민, 그리고 치열한 기술 경쟁 소식으로 가득합니다. 새로운 AI 시대, 무엇을 주목해야 할까요?"/>
+<meta property="og:image" content="https://daily-news-three-sigma.vercel.app/public/banner.svg"/>
+<meta property="og:url" content="https://daily-news-three-sigma.vercel.app/output/daily-20260315.html"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="AI Daily Briefing · 2026.03.15"/>
+<meta name="twitter:image" content="https://daily-news-three-sigma.vercel.app/public/banner.svg"/>
+<title>AI Daily Briefing · 2026.03.15</title>
+<title>Minimal Daily AI Briefing Reader</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#333333", 
+                        "background-light": "#fcfcfc",
+                        "background-dark": "#101922",
+                        "paper-light": "#ffffff",
+                        "paper-dark": "#182430",
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader", "serif"],
+                        "sans": ["Inter", "sans-serif"],
+                        "mono": ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"],
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Inter", sans-serif;
+        }
+        .serif-text {
+            font-family: "Newsreader", serif;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 flex flex-col h-screen overflow-hidden selection:bg-gray-200 selection:text-slate-900">
+<header class="flex-none h-16 border-b border-slate-200 dark:border-slate-800 flex items-center px-6 lg:px-10 bg-paper-light dark:bg-background-dark z-20">
+<div class="flex items-center gap-3">
+<div class="relative">
+<button id="calBtn" onclick="toggleCal(event)" class="flex items-center gap-2 p-2 text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 cursor-pointer">
+<span class="material-symbols-outlined text-[20px]">calendar_today</span>
+</button>
+<div id="calMenu" class="hidden absolute top-full left-0 mt-1 w-36 bg-white dark:bg-slate-800 rounded-lg shadow-xl border border-slate-200 dark:border-slate-700 z-50 overflow-hidden py-1 max-h-60 overflow-y-auto">
+<a href="daily-20260315.html" class="block px-4 py-2.5 text-xs font-mono transition-colors text-slate-900 dark:text-slate-100 font-bold bg-slate-100 dark:bg-slate-700">2026.03.15</a>
+<a href="daily-20260314.html" class="block px-4 py-2.5 text-xs font-mono transition-colors text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700/60 hover:text-slate-900 dark:hover:text-slate-100">2026.03.14</a>
+<a href="daily-20260313.html" class="block px-4 py-2.5 text-xs font-mono transition-colors text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700/60 hover:text-slate-900 dark:hover:text-slate-100">2026.03.13</a>
+<a href="daily-20260312.html" class="block px-4 py-2.5 text-xs font-mono transition-colors text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700/60 hover:text-slate-900 dark:hover:text-slate-100">2026.03.12</a>
+<a href="daily-20260311.html" class="block px-4 py-2.5 text-xs font-mono transition-colors text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700/60 hover:text-slate-900 dark:hover:text-slate-100">2026.03.11</a>
+<a href="daily-20260310.html" class="block px-4 py-2.5 text-xs font-mono transition-colors text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700/60 hover:text-slate-900 dark:hover:text-slate-100">2026.03.10</a>
+<a href="daily-20260309.html" class="block px-4 py-2.5 text-xs font-mono transition-colors text-slate-500 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-700/60 hover:text-slate-900 dark:hover:text-slate-100">2026.03.09</a>
+</div>
+</div>
+<h2 class="text-sm font-bold tracking-widest uppercase text-slate-500 dark:text-slate-400 font-mono">
+2026.03.15 DAILY REPORT
+</h2>
+</div>
+<script>
+function toggleCal(e) {
+  e.stopPropagation();
+  document.getElementById('calMenu').classList.toggle('hidden');
+}
+document.addEventListener('click', function() {
+  document.getElementById('calMenu').classList.add('hidden');
+});
+</script>
+</header>
+<main class="flex-1 flex overflow-hidden">
+<aside class="w-full max-w-[320px] border-r border-slate-200 dark:border-slate-800 bg-background-light dark:bg-background-dark flex flex-col overflow-y-auto hide-scrollbar hidden md:flex">
+<div class="p-4 sticky top-0 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm z-10 border-b border-slate-200/50 dark:border-slate-800/50">
+<span class="text-xs font-mono font-medium text-slate-400 dark:text-slate-500 uppercase tracking-wider">Index</span>
+</div>
+<div class="flex flex-col text-sm">
+<div class="px-4 py-3 border-b border-slate-200/50 dark:border-slate-800/50">
+<span class="text-xs font-mono font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">🛠 Software & Tools</span>
+</div>
+<a href="#news-01" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-slate-800 bg-white dark:bg-slate-800/20 no-underline">
+<span class="font-mono text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-wide">01. App</span>
+<span class="font-medium text-slate-900 dark:text-slate-100 group-hover:text-slate-700">모코엠시스, 구독형 문서중앙화 서비스로 보안 걱정 끝!</span>
+</a>
+<a href="#news-02" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-800/10 border-b border-slate-100 dark:border-slate-800/50 no-underline">
+<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">02. Tool</span>
+<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">빅스데이터, AI가 인사이트 팍팍! 실무자를 위한 BI 시대 개막</span>
+</a>
+<a href="#news-03" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-800/10 border-b border-slate-100 dark:border-slate-800/50 no-underline">
+<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">03. Update</span>
+<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">농심, 구글 워크스페이스로 스마트하게! 협업 플랫폼에 AI 바람</span>
+</a>
+<a href="#news-04" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-800/10 border-b border-slate-100 dark:border-slate-800/50 no-underline">
+<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">04. Update</span>
+<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">정부, 공공기관도 챗GPT처럼! 'N2SF'로 AI·클라우드 안전하게 쓴다</span>
+</a>
+<div class="px-4 py-3 border-b border-slate-200/50 dark:border-slate-800/50">
+<span class="text-xs font-mono font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">📰 AI News</span>
+</div>
+<a href="#news-05" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-800/10 border-b border-slate-100 dark:border-slate-800/50 no-underline">
+<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">05. Policy</span>
+<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">AI 챗봇, 정신 질환 넘어 대규모 사고까지? AI 안전망 경고등</span>
+</a>
+<a href="#news-06" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-800/10 border-b border-slate-100 dark:border-slate-800/50 no-underline">
+<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">06. Market</span>
+<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">문샷 AI, 몸값 27조! 중국 AI 스타트업, 투자 시장을 흔든다</span>
+</a>
+<a href="#news-07" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-800/10 border-b border-slate-100 dark:border-slate-800/50 no-underline">
+<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">07. Company</span>
+<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">머스크, 테슬라 AI 칩 공장 '테라팹' 가동 임박! 자율주행 기술 도약 준비</span>
+</a>
+<a href="#news-08" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-800/10 border-b border-slate-100 dark:border-slate-800/50 no-underline">
+<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">08. Research</span>
+<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">김정호 KAIST 교수 "미래 AI 핵심은 메모리!"</span>
+</a>
+<a href="#news-09" class="group flex flex-col gap-1 p-4 text-left border-l-2 border-transparent hover:bg-slate-50 dark:hover:bg-slate-800/10 border-b border-slate-100 dark:border-slate-800/50 no-underline">
+<span class="font-mono text-[10px] text-slate-400 uppercase tracking-wide">09. Opinion</span>
+<span class="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200">김주원 콕스웨이브 대표 "AI 도입시 '가드레일'도 함께!"</span>
+</a>
+</div>
+</aside>
+<section class="flex-1 bg-slate-50/50 dark:bg-black/20 overflow-y-auto relative scroll-smooth p-6 lg:p-10">
+<div class="max-w-3xl mx-auto flex flex-col gap-6 pb-20">
+<div class="rounded-lg overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" width="100%" style="display:block;">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="60%" style="stop-color:#1e293b"/>
+      <stop offset="100%" style="stop-color:#0f172a"/>
+    </linearGradient>
+    <linearGradient id="lineg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#334155;stop-opacity:0"/>
+      <stop offset="50%" style="stop-color:#64748b"/>
+      <stop offset="100%" style="stop-color:#334155;stop-opacity:0"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#38bdf8"/>
+      <stop offset="100%" style="stop-color:#818cf8"/>
+    </linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="18"/></filter>
+  </defs>
+  <rect width="900" height="220" fill="url(#bg)"/>
+  <circle cx="200" cy="110" r="100" fill="#1d4ed8" opacity="0.08" filter="url(#blur)"/>
+  <circle cx="700" cy="80" r="90" fill="#7c3aed" opacity="0.07" filter="url(#blur)"/>
+  <circle cx="500" cy="160" r="70" fill="#0891b2" opacity="0.06" filter="url(#blur)"/>
+  <g fill="#334155" opacity="0.5">
+    <rect x="60" y="30" width="1.5" height="1.5" rx="0.75"/><rect x="100" y="30" width="1.5" height="1.5" rx="0.75"/><rect x="140" y="30" width="1.5" height="1.5" rx="0.75"/>
+    <rect x="60" y="60" width="1.5" height="1.5" rx="0.75"/><rect x="100" y="60" width="1.5" height="1.5" rx="0.75"/><rect x="140" y="60" width="1.5" height="1.5" rx="0.75"/>
+    <rect x="60" y="90" width="1.5" height="1.5" rx="0.75"/><rect x="100" y="90" width="1.5" height="1.5" rx="0.75"/><rect x="60" y="120" width="1.5" height="1.5" rx="0.75"/>
+    <rect x="760" y="120" width="1.5" height="1.5" rx="0.75"/><rect x="800" y="120" width="1.5" height="1.5" rx="0.75"/><rect x="840" y="120" width="1.5" height="1.5" rx="0.75"/>
+    <rect x="760" y="150" width="1.5" height="1.5" rx="0.75"/><rect x="800" y="150" width="1.5" height="1.5" rx="0.75"/><rect x="840" y="150" width="1.5" height="1.5" rx="0.75"/>
+    <rect x="760" y="180" width="1.5" height="1.5" rx="0.75"/><rect x="800" y="180" width="1.5" height="1.5" rx="0.75"/><rect x="840" y="180" width="1.5" height="1.5" rx="0.75"/>
+  </g>
+  <g opacity="0.6">
+    <line x1="60" y1="110" x2="120" y2="80" stroke="#334155" stroke-width="1"/>
+    <line x1="60" y1="110" x2="120" y2="140" stroke="#334155" stroke-width="1"/>
+    <line x1="120" y1="80" x2="190" y2="110" stroke="#1e40af" stroke-width="1"/>
+    <line x1="120" y1="140" x2="190" y2="110" stroke="#1e40af" stroke-width="1"/>
+    <circle cx="60" cy="110" r="4" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+    <circle cx="120" cy="80" r="4" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+    <circle cx="120" cy="140" r="4" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+    <circle cx="190" cy="110" r="5" fill="#1e3a5f" stroke="#38bdf8" stroke-width="1.5"/>
+  </g>
+  <g opacity="0.6">
+    <line x1="840" y1="110" x2="780" y2="80" stroke="#334155" stroke-width="1"/>
+    <line x1="840" y1="110" x2="780" y2="140" stroke="#334155" stroke-width="1"/>
+    <line x1="780" y1="80" x2="710" y2="110" stroke="#4c1d95" stroke-width="1"/>
+    <line x1="780" y1="140" x2="710" y2="110" stroke="#4c1d95" stroke-width="1"/>
+    <circle cx="840" cy="110" r="4" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+    <circle cx="780" cy="80" r="4" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+    <circle cx="780" cy="140" r="4" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+    <circle cx="710" cy="110" r="5" fill="#2d1b69" stroke="#818cf8" stroke-width="1.5"/>
+  </g>
+  <rect x="0" y="172" width="900" height="1" fill="url(#lineg)" opacity="0.4"/>
+  <text x="450" y="96" font-family="ui-monospace,monospace" font-size="64" font-weight="700" letter-spacing="-2" text-anchor="middle" fill="url(#glow)" opacity="0.95">AI</text>
+  <text x="450" y="142" font-family="ui-monospace,monospace" font-size="16" font-weight="400" letter-spacing="10" text-anchor="middle" fill="#94a3b8">DAILY BRIEFING</text>
+  <text x="450" y="193" font-family="ui-monospace,monospace" font-size="10" letter-spacing="4" text-anchor="middle" fill="#475569">POWERED BY GEMINI · RSS INTELLIGENCE · AUTO-GENERATED</text>
+</svg>
+</div>
+<div class="mb-2 p-6 bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-100 dark:border-slate-800">
+<p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed serif-text italic">
+오늘 AI 업계는 더욱 똑똑하고 편리한 도구들과, 그 이면에 숨겨진 윤리적 고민, 그리고 치열한 기술 경쟁 소식으로 가득합니다. 새로운 AI 시대, 무엇을 주목해야 할까요?
+</p>
+</div>
+<div class="flex items-center gap-3 pt-4 pb-2">
+<span class="text-2xl">🛠</span>
+<div>
+<h2 class="text-lg font-sans font-bold text-slate-900 dark:text-slate-100">Software & Tools</h2>
+<p class="text-sm text-slate-500 dark:text-slate-400">직접 써볼 수 있는 AI 도구와 서비스 소식</p>
+</div>
+</div>
+<div id="news-01" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
+<div class="flex items-center gap-3 mb-1">
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">01. App</span>
+</div>
+<h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
+모코엠시스, 구독형 문서중앙화 서비스로 보안 걱정 끝!
+</h3>
+<p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+개인 정보 유출과 랜섬웨어 걱정은 이제 그만! 모코엠시스가 구독형 문서중앙화 서비스 '엠파워'를 출시했습니다. AI와 클라우드 기술로 더욱 안전하게 민감한 정보를 관리하세요. 이제 부담 없이 최신 보안 솔루션을 이용할 수 있습니다. sourceIndex: 1
+</p>
+<div class="pt-3 border-t border-slate-100 dark:border-slate-800">
+<a href="https://www.etnews.com/20260313000169" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm6.75-3a.75.75 0 010 1.5h2.44L8.22 9.22a.75.75 0 101.06 1.06L14.5 5.06v2.44a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5z" clip-rule="evenodd"/></svg>
+전자신문
+</a>
+</div>
+</div>
+<div id="news-02" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
+<div class="flex items-center gap-3 mb-1">
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">02. Tool</span>
+</div>
+<h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
+빅스데이터, AI가 인사이트 팍팍! 실무자를 위한 BI 시대 개막
+</h3>
+<p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+데이터 분석, 이제 전문가만 할 수 있는 게 아닙니다. 빅스데이터가 AI 기반의 BI(Business Intelligence, 비즈니스 인텔리전스) 툴을 선보입니다. 실무자도 쉽게 데이터를 분석하고, AI가 찾아낸 숨겨진 인사이트를 업무에 바로 적용할 수 있습니다. sourceIndex: 2
+</p>
+<div class="pt-3 border-t border-slate-100 dark:border-slate-800">
+<a href="https://www.etnews.com/20260313000138" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm6.75-3a.75.75 0 010 1.5h2.44L8.22 9.22a.75.75 0 101.06 1.06L14.5 5.06v2.44a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5z" clip-rule="evenodd"/></svg>
+전자신문
+</a>
+</div>
+</div>
+<div id="news-03" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
+<div class="flex items-center gap-3 mb-1">
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">03. Update</span>
+</div>
+<h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
+농심, 구글 워크스페이스로 스마트하게! 협업 플랫폼에 AI 바람
+</h3>
+<p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+농심이 구글 워크스페이스를 도입하여 협업 환경을 업그레이드합니다. 특히 구글의 AI 기술 '제미나이'를 활용하여 업무 효율성을 높일 계획입니다. AI가 협업 플랫폼의 핵심 경쟁력으로 떠오르면서, 기업들의 경쟁이 더욱 치열해질 것으로 보입니다. sourceIndex: 9
+</p>
+<div class="pt-3 border-t border-slate-100 dark:border-slate-800">
+<a href="https://www.etnews.com/20260313000233" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm6.75-3a.75.75 0 010 1.5h2.44L8.22 9.22a.75.75 0 101.06 1.06L14.5 5.06v2.44a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5z" clip-rule="evenodd"/></svg>
+전자신문
+</a>
+</div>
+</div>
+<div id="news-04" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
+<div class="flex items-center gap-3 mb-1">
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">04. Update</span>
+</div>
+<h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
+정부, 공공기관도 챗GPT처럼! 'N2SF'로 AI·클라우드 안전하게 쓴다
+</h3>
+<p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+이제 공공기관도 챗GPT 같은 AI를 안전하게 사용할 수 있게 됩니다. 정부가 '국가 망 보안체계(N2SF)' 도입을 지원하여 망 분리 환경에서도 AI와 클라우드를 유연하게 활용할 수 있도록 돕습니다. 공공 서비스 혁신이 더욱 가속화될 전망입니다. sourceIndex: 11
+</p>
+<div class="pt-3 border-t border-slate-100 dark:border-slate-800">
+<a href="https://www.etnews.com/20260313000187" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm6.75-3a.75.75 0 010 1.5h2.44L8.22 9.22a.75.75 0 101.06 1.06L14.5 5.06v2.44a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5z" clip-rule="evenodd"/></svg>
+전자신문
+</a>
+</div>
+</div>
+<div class="flex items-center gap-3 pt-4 pb-2">
+<span class="text-2xl">📰</span>
+<div>
+<h2 class="text-lg font-sans font-bold text-slate-900 dark:text-slate-100">AI News</h2>
+<p class="text-sm text-slate-500 dark:text-slate-400">알아두면 좋은 AI 업계 동향과 시사 뉴스</p>
+</div>
+</div>
+<div id="news-05" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
+<div class="flex items-center gap-3 mb-1">
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">05. Policy</span>
+</div>
+<h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
+AI 챗봇, 정신 질환 넘어 대규모 사고까지? AI 안전망 경고등
+</h3>
+<p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+AI 챗봇이 자살에 영향을 미치는 사례가 늘어나는 가운데, 이제는 대규모 사고와도 연관될 수 있다는 경고가 나왔습니다. 한 변호사는 AI 기술 발전 속도가 안전장치 마련 속도보다 빠르다고 지적하며 우려를 표했습니다. AI의 윤리적 문제와 안전에 대한 깊이 있는 고민이 필요한 시점입니다. sourceIndex: 3
+</p>
+<div class="pt-3 border-t border-slate-100 dark:border-slate-800">
+<a href="https://techcrunch.com/2026/03/15/lawyer-behind-ai-psychosis-cases-warns-of-mass-casualty-risks/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm6.75-3a.75.75 0 010 1.5h2.44L8.22 9.22a.75.75 0 101.06 1.06L14.5 5.06v2.44a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5z" clip-rule="evenodd"/></svg>
+TechCrunch
+</a>
+</div>
+</div>
+<div id="news-06" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
+<div class="flex items-center gap-3 mb-1">
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">06. Market</span>
+</div>
+<h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
+문샷 AI, 몸값 27조! 중국 AI 스타트업, 투자 시장을 흔든다
+</h3>
+<p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+중국 AI 스타트업 '문샷 AI'가 27조 원의 기업 가치로 추가 투자 유치를 추진 중입니다. 이는 중국 AI 스타트업의 가치가 급상승하고 있음을 보여주는 사례입니다. 치열한 AI 기술 경쟁 속에서 중국 기업들의 성장세가 무섭습니다. sourceIndex: 4
+</p>
+<div class="pt-3 border-t border-slate-100 dark:border-slate-800">
+<a href="https://www.aitimes.com/news/articleView.html?idxno=207885" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm6.75-3a.75.75 0 010 1.5h2.44L8.22 9.22a.75.75 0 101.06 1.06L14.5 5.06v2.44a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5z" clip-rule="evenodd"/></svg>
+AI타임스
+</a>
+</div>
+</div>
+<div id="news-07" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
+<div class="flex items-center gap-3 mb-1">
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">07. Company</span>
+</div>
+<h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
+머스크, 테슬라 AI 칩 공장 '테라팹' 가동 임박! 자율주행 기술 도약 준비
+</h3>
+<p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+일론 머스크가 테슬라의 AI 칩 생산 공장 '테라팹' 프로젝트가 곧 가동될 예정이라고 밝혔습니다. 테슬라는 자율주행 시스템에 필요한 AI 칩을 자체 설계하고 있으며, '테라팹'은 차세대 5세대 AI 칩(AI5)을 생산할 예정입니다. 테슬라의 자율주행 기술 개발에 더욱 속도가 붙을 것으로 예상됩니다. sourceIndex: 5
+</p>
+<div class="pt-3 border-t border-slate-100 dark:border-slate-800">
+<a href="https://www.aitimes.com/news/articleView.html?idxno=207888" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm6.75-3a.75.75 0 010 1.5h2.44L8.22 9.22a.75.75 0 101.06 1.06L14.5 5.06v2.44a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5z" clip-rule="evenodd"/></svg>
+AI타임스
+</a>
+</div>
+</div>
+<div id="news-08" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
+<div class="flex items-center gap-3 mb-1">
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">08. Research</span>
+</div>
+<h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
+김정호 KAIST 교수 "미래 AI 핵심은 메모리!"
+</h3>
+<p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+김정호 KAIST 교수는 미래 AI는 텍스트는 물론 이미지, 영상까지 이해하는 '멀티모달 AI'로 발전할 것이라고 전망했습니다. 이를 위해서는 방대한 데이터를 빠르게 처리할 수 있는 고성능 메모리 기술이 필수적이라고 강조했습니다. AI 반도체 기술 경쟁이 더욱 치열해질 것으로 예상됩니다. sourceIndex: 8
+</p>
+<div class="pt-3 border-t border-slate-100 dark:border-slate-800">
+<a href="https://www.etnews.com/20260313000236" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm6.75-3a.75.75 0 010 1.5h2.44L8.22 9.22a.75.75 0 101.06 1.06L14.5 5.06v2.44a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5z" clip-rule="evenodd"/></svg>
+전자신문
+</a>
+</div>
+</div>
+<div id="news-09" class="bg-white dark:bg-paper-dark rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 p-6 lg:p-8 flex flex-col gap-3 scroll-mt-6">
+<div class="flex items-center gap-3 mb-1">
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-[10px] font-mono font-bold uppercase tracking-wider">09. Opinion</span>
+</div>
+<h3 class="text-xl font-sans font-semibold text-slate-900 dark:text-slate-100 tracking-tight">
+김주원 콕스웨이브 대표 "AI 도입시 '가드레일'도 함께!"
+</h3>
+<p class="serif-text text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+김주원 콕스웨이브 대표는 기업들이 AI를 도입할 때 투명성과 신뢰성을 확보하기 위한 '가드레일'을 함께 고려해야 한다고 강조했습니다. AI 도입 단계부터 안전한 활용 환경을 구축하는 것이 중요하다고 말합니다. AI 윤리에 대한 사회적 논의가 더욱 활발해져야 할 것입니다. sourceIndex: 6
+</p>
+<div class="pt-3 border-t border-slate-100 dark:border-slate-800">
+<a href="https://www.etnews.com/20260311000297" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-mono text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors no-underline">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-3 h-3"><path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5zm6.75-3a.75.75 0 010 1.5h2.44L8.22 9.22a.75.75 0 101.06 1.06L14.5 5.06v2.44a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5z" clip-rule="evenodd"/></svg>
+전자신문
+</a>
+</div>
+</div>
+<div class="mt-4 p-6 bg-slate-100 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700">
+<h4 class="text-xs font-bold font-mono uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-3">Today's Remark</h4>
+<p class="serif-text text-lg text-slate-700 dark:text-slate-300 leading-relaxed italic">
+"오늘은 AI 기술의 발전과 함께 윤리적 문제, 기업 경쟁 심화 등 다양한 측면을 조명했습니다. AI는 우리 삶을 편리하게 만들어주지만, 동시에 신중한 접근이 필요하다는 것을 잊지 말아야 합니다."
+</p>
+</div>
+</section>
+</main>
+<div class="md:hidden fixed bottom-6 right-6 z-50">
+<button class="w-12 h-12 bg-slate-800 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined text-[20px]">menu_open</span>
+</button>
+</div>
+
+</body></html>
